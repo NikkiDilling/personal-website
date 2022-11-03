@@ -19,6 +19,22 @@ h5{
 }
 
 
+/* Making the footer stick to the bottom of the page */
+/* The article fills all the space between header & footer */
+body{ min-height: 100vh; margin:0; }
+
+header{ min-height:50px; }
+footer{ min-height:50px; }
+
+body{ display:flex; flex-direction:column; }
+
+.content-box{
+    flex: 1;
+}
+/* used stackoverflow solution */
+
+
+
 body{
     background-color: #9B9DBD;
     background-size: cover;
@@ -172,7 +188,7 @@ h1 span{
 }
 
 article{
-    padding: 24px 40px;
+    padding: 25px 40px;
     background-color: rgb(240, 248, 255, 0.35);
     border-radius: 30px;
     margin-right: 15px;
