@@ -28,7 +28,7 @@ footer{ min-height:50px; }
 
 body{ display:flex; flex-direction:column; }
 
-.content-box{
+.content-box, .content-box_about-me{
     flex: 1;
 }
 /* used stackoverflow solution */
@@ -40,6 +40,7 @@ body{
     background-size: cover;
     max-width: 100%;
     margin: 0 10px 0 10px;
+    /* doesn't allow the horizontal scroll bar to appear */
     overflow-x:hidden;
     
 }
@@ -140,20 +141,27 @@ body header:hover{
     transform: scale(1.1);
 }
 
-body .main-logo a:hover{
+body .main-logo:hover{
     transform: scale(1.1);
 }
-.main-logo a{
+
+.main-logo{
     display: flex;
     justify-content: center;
+    flex-flow: column;
+    margin-bottom: 2%;
+
+}
+.main-logo a{
+    display: inline;
+    text-align: center;
     transition: transform 0.5s;
-    max-width: 100%;
+    margin: auto;
 }
 
 .main-logo img{
-    width: 8%;
+    width: 10%;
     margin-top: 2%;
-    margin-bottom: 2%;
     border-radius: 50px;
     -webkit-box-shadow: -4px 7px 24px 5px rgba(82,52,175,0.45); 
     box-shadow: -4px 7px 24px 5px rgba(82,52,175,0.45);
