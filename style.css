@@ -46,8 +46,7 @@ body{
     margin: 0 10px 0 10px;
     /* doesn't allow the horizontal scroll bar to appear */
     overflow-x:hidden;
-   
-    
+      
 }
 
 @media only screen and (max-width: 600px){
@@ -91,15 +90,15 @@ body{
     
 }
 
-body nav{
+nav{
     display: flex;
     width: 60%;
     justify-content: space-evenly;
     margin: auto;
     margin-top: 3%;
-    transition: 1;
-  
+    
 }
+
 
 /* Copy to media for responsive padding */
 nav h2{ 
@@ -111,11 +110,12 @@ nav h2{
     -webkit-box-shadow: -2px 7px 24px -1px rgba(82,52,175,0.45); 
     box-shadow: -2px 7px 24px -1px rgba(82,52,175,0.);
     text-shadow: 2px 2px 10px blue;
+    transition: 0.5s;
 }
 
 
 nav h2:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 
@@ -150,12 +150,12 @@ body .main-logo:hover{
     justify-content: center;
     flex-flow: column;
     margin-bottom: 2%;
+    transition: transform 0.5s;
 
 }
 .main-logo a{
     display: inline;
     text-align: center;
-    transition: transform 0.5s;
     margin: auto;
 }
 
