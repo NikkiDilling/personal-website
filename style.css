@@ -19,7 +19,7 @@ h2,h3{
 
 h5{
     font-size: 1em;
-    text-shadow: 2px 2px 10px blueviolet;
+    text-shadow: 2px 2px 10px #E75A64;
     color: aliceblue;
 }
 
@@ -105,7 +105,7 @@ nav h2{
     margin-right: 10px;
     margin-left: 10px;
     padding: 2px 10px;
-    background-color: #7e83d0;
+    background-color: #E75A64;
     border-radius: 33px;
     -webkit-box-shadow: -2px 7px 24px -1px rgba(82,52,175,0.45); 
     box-shadow: -2px 7px 24px -1px rgba(82,52,175,0.);
