@@ -50,7 +50,8 @@ body{
 }
 
 @media only screen and (max-width: 600px){
-    body .content-box{
+   
+    body .content-box, .content-box_about-me{
     display: flex;
     flex-flow: column;
     margin-top: 2%;
@@ -94,11 +95,11 @@ body{
         margin: auto;
         margin-top: 3%;
     }
-    
+
 }
 
 @media only screen and (max-width: 950px){
-
+    
     header{
         display: flex;
         justify-content: center;
@@ -167,6 +168,8 @@ nav h2:hover{
 
 
 body .content-box_about-me{
+    display: flex;
+    flex-flow: column;
     width: 60%;
     margin: auto;
     text-align: center;
