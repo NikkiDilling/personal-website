@@ -23,6 +23,9 @@ h5{
     color: aliceblue;
 }
 
+.project-link:hover{
+color: lightskyblue;
+}
 
 /* Making the footer stick to the bottom of the page */
 /* The article fills all the space between header & footer */
