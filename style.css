@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Playfair Display', serif;
     letter-spacing: .1rem;
+    min-width: 0; 
 }
 
 a{
@@ -54,12 +55,16 @@ body{
 
 @media only screen and (max-width: 600px){
    
-    body .content-box, .content-box_about-me{
+    body .content-box{
     display: flex;
     flex-flow: column;
     margin-top: 2%;
     }
 
+    body .content-box_about-me{
+        width: 100%;
+    }
+    
     .icons-box{
         display: flex;
         flex-flow: column;
@@ -112,6 +117,11 @@ body{
        
     }
 
+    
+    body .content-box_about-me{
+        width: 90%;
+    }
+
     header img{
         display: inline;
         margin: auto;
@@ -131,7 +141,7 @@ body{
     }
     
     
-    body .content-box{
+    body .content-box, .content-box_about-me{
     display: flex;
     flex-flow: column;
     margin-top: 2%;
@@ -173,7 +183,7 @@ nav h2:hover{
 body .content-box_about-me{
     display: flex;
     flex-flow: column;
-    width: 60%;
+    flex-wrap: wrap;
     margin: auto;
     text-align: center;
     text-shadow: 2px 2px 10px blue;
