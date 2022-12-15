@@ -20,58 +20,69 @@
 <body>
 
     <header>
-        <img src="photo/me2.jpg" alt="website logo">
-     
-        <div class="Welcome">
-            <h1>Education & Experience</h1>
-            
-        </div>
-      
-    </header>   
-    
-    <nav>
-        <h2><a href="index.html"><img src="photo/home-logo.png" alt="website logo"></a></h2>    
-    </nav>
 
-<div class="content-box">
-    <article>
-        <h2> Education</h2>
-        <ul>
-            <li>BA in Humanities and technilogies, Roskilde University, Denmark
-                 <p>Specialty: Computer Science & Informatics</p> <br>
+        <div class="container">
+            <div class="container-flex container-flex-header">
+                <img src="photo/me2.jpg" alt="website logo" class="header-image">
 
+            <h1 class="header-title">EDUCATION & EXPERIENCE</h1>
+                
+            </div>     
+
+        <nav>
             <ul>
-                <li>BA (Exchange): Sungkyunkwan University, South Korea
-                    <p>Major: Software</p> <br>
-
-                    <p>During my exchange I've been focused on bettering myself.</p>
-                    <p>I learned gained basic and indepth knowledge in the CS field,</p>
-                    <p>focused on my own extracariccular projects. But also learned</p>
-                    <p>about the Korean culture, people's work/life practices which differ</p>
-                    <p>a lot from the western. Furthermore I enjoyed working on my </p>
-                    <p>korean communication skills.</p>
+                <li class="nav-list-item item-home">
+                    <a href="index.html">
+                        <img src="photo/home-logo.png" alt="website logo" class="nav-item-home-image">
+                    </a> 
                 </li>
             </ul>
-                </li>
+        </nav>
+      </div>
+    </header>   
+    
+
+<div class="container container-flex">
+
+        <article class="article">
+            <h2 class="article-title title-border"> Education</h2>
+
+            <li class="article-list-item">BA in Humanities and Technologies, Roskilde University, Denmark  </li>
+                 <p>Specialty: Computer Science & Informatics</p> <br>
+
+            <ul class="article-sublist">
+                <li class="article-list-item">Exchange: Sungkyunkwan University, South Korea </li>
+                    <p>Major: Software</p>
+            </ul>
+
+            
+            <p>During my exchange I've been focused on bettering myself.
+            I gained basic and indepth knowledge in the CS field, and
+            focused on my own extracurricular projects. But also I learned
+            about the Korean culture, and people's work/life practices, which
+            motivates me to work further on bettering my skills.</p>
             
         </ul>
-    </article>
+        </article>
+
 </div> 
+<!-- End of "container"-->
 
-    <hr/>
-    <footer>
-        
-        <address>
-            <h4>Contact Information</h4>
-            <p> Email: ndillinghansen@gmail.com </p>
-        </address>
 
-        <div class="social">
-            <a href="https://www.instagram.com/nikki.d.ream/" target="_blank" ><img src="photo/instagram-icon.png"  alt="instagram link"></a>
-        
-            <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank"><img src="photo/github-icon.jpg" alt="github link"></a>
-        </div>
-    </footer>
+<footer>
+
+    <address class="contact-info">
+        <h4>Contact Information</h4>
+        <p class="contact-info-email"> Email: ndillinghansen@gmail.com </p>
+    </address>
+
+    <div class="contact-social">
+        <a href="https://www.linkedin.com/in/nikki-dilling-hansen/" target="_blank" class="contact-social-link"><img src="photo/linkedin-logo.png"  alt="linkedin link"></a>
+    
+        <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank" class="contact-social-link"><img src="photo/github-icon.jpg" alt="github link"></a>
+    </div>
+
+</footer>
 </body>
 
 

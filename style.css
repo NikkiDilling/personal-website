@@ -30,6 +30,7 @@ h1{
 a{
     text-decoration: none;
     color: #434343;
+    font-weight: 700;
 }
 
 .header-title p, 
@@ -69,10 +70,22 @@ header{
 
 /* navigation */
 nav a{
-    padding: .5em 1em; 
     color: white;
+}
+
+.nav-list-item{
+    padding: .5em 1em;
     background: #E75A64;
     border-radius: 90px;
+    -webkit-box-shadow: -2px 7px 24px -1px rgb(82 52 175 / 45%);
+}
+
+.item-home{
+    padding: .3em .5em;
+}
+
+.nav-item-home-image{
+    max-width:35px;
 }
 
 nav li{
@@ -91,6 +104,7 @@ nav ul{
     flex-direction: column;
     margin-top: 2em;
 }
+
 
 /* article */
 
@@ -127,7 +141,7 @@ aside{
 }
 
 .article-content{
-    margin: 1em 1em;
+    margin: 1em auto;
 
 }
 
@@ -136,6 +150,7 @@ aside{
 footer{
     text-align: center;
     background: #a0a5f2;
+    margin: auto;
     padding: 1.5em 0;
 }
 
@@ -155,8 +170,8 @@ footer{
 @media (min-width:635px){
 
     .nav-list-item{
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 1em;
+        margin-right: 1em;
         max-width: 300px;
     }
 
@@ -167,16 +182,36 @@ footer{
 
     .container-flex{
         flex-direction: row;
+        justify-content: center;
+    }
+
+    .container-flex-header{
+        align-items: center;
+    }
+
+    .container-flex:nth-child(2){
         margin-bottom: 4em;
+    }
+
+    .header-title{
+        text-align: start;
+    }
+
+    .header-image{
+       margin: 0 .5em;
     }
 
     main{
         width: 65%;
+        max-width: 500px;
     }
 
     aside{
-        width: 35%;
-        min-width: 225px;
-        margin-left: 10px;
+        width: 30%;
+        margin-left: 1em;
+    }
+
+    .sidebar-article{
+        min-width: 195px;
     }
 }
