@@ -16,15 +16,15 @@ img{
     Typography
 *******************/
 
-h1,h3,h4{
-    font-size: 1.5rem;
+h1,h2,h4{
     font-family: 'Nanum Myeongjo', serif;
     font-weight: 700;
+    font-size: 1.75rem;
 }
 
 h1{
-    font-weight: 800;
     font-size: 2rem;
+    font-weight: 800;
 }
 
 a{
@@ -32,6 +32,7 @@ a{
     color: #434343;
     font-weight: 700;
 }
+
 
 .header-title p, 
 .article-subtitle{
@@ -43,15 +44,36 @@ span{
     font-weight: 800;
 }
 
+ul{
+    list-style: none;
+    padding: 0; /*get rids of extra space on the side*/
+}
+
+.title-border{
+    width: fit-content;
+    margin: auto;
+    padding: .5em 0;
+    border-bottom: 1px solid #434343;
+}
+
+.contact-info-email{
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+
 /*******************
     Layout
 *******************/
 
 .container{
+    margin: auto; /*centering the container*/
     width: 90%;
     max-width: 900px;
-    margin: 0 auto; /*centering the container*/
     text-align: center;
+}
+
+.container-last{
+    margin-bottom: 4em; /*giving it bottom margin*/
 }
 
 .container-flex{
@@ -98,8 +120,6 @@ nav li:hover{
 }
 
 nav ul{
-    list-style: none;
-    padding: 0; /*get rids of extra space on the side*/
     display: flex;
     flex-direction: column;
     margin-top: 2em;
@@ -109,30 +129,18 @@ nav ul{
 /* article */
 
 article{
-   padding: .5em 0;
+   padding: .5em 2em;
    border: 10px solid  #7e83d0;
    border-radius: 90px;
-   margin-top: 1.5em;
+   margin-top: 1.5em; /*spacing between articles*/
 }
 
 .article-link:hover{
     color: #a0a5f2;
 }
 
-aside{
-    margin-bottom: 4em;
-}
-
-.title-border{
-    width: fit-content;
-    margin: auto;
-    padding: .5em 0;
-    border-bottom: 1px solid #434343;
-}
-
 .article-list,
 .article-sublist{
-    max-width: 200px;
     margin: 0 auto; /*centering the list*/
 }
 
@@ -159,19 +167,22 @@ footer{
     margin-bottom: 2em;
 }
 
-.contact-info-email{
-    font-weight: 700;
-    letter-spacing: .1em;
+.contact-images{
+    max-width: 80px;
+    margin: 0 .5em;
+}
+
+.contact-images:hover{
+    opacity: .75;
 }
 
 /* desktop media query 
-    from width of 635px to BIGGER
+    from width of 825px to BIGGER
 */
-@media (min-width:635px){
+@media (min-width: 825px){
 
     .nav-list-item{
-        margin-left: 1em;
-        margin-right: 1em;
+        margin: 0 1em; /*setting a smaller margin to give space to justify-content*/
         max-width: 300px;
     }
 
@@ -189,8 +200,10 @@ footer{
         align-items: center;
     }
 
-    .container-flex:nth-child(2){
-        margin-bottom: 4em;
+    .article-personal-traits,
+    .article-interests{
+        max-width: 50%;
+        margin: 1em auto;
     }
 
     .header-title{
@@ -203,15 +216,11 @@ footer{
 
     main{
         width: 65%;
-        max-width: 500px;
+        max-width: 600px;
     }
 
     aside{
         width: 30%;
         margin-left: 1em;
-    }
-
-    .sidebar-article{
-        min-width: 195px;
     }
 }
