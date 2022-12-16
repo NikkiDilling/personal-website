@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--viewport width property-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--stylesheet-->
     <link rel="stylesheet" href="style.css">
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+
     <title>Nikki Dilling-Hansen</title>
 
 
@@ -18,109 +23,108 @@
 
 
     <header>
-       
-             <img src="photo/me.jpg" alt="creator's picture">
+        <div class="container">
 
-        <div class="Welcome">
-            <h1><span>Welcome</span> to my page!</h1>
-            <p>My name is <span> Nikki </span>and I am an aspiring web developer</p>
-        </div>
-       
+            <div class="container-flex container-flex-header">
+                <img src="photo/me.jpg" alt="author's portrait" class="header-image">
 
+                <div class="header-title">
+                    <h1>Welcome to my page!</h1>
+                    <p>My name is <span> Nikki </span>and I am an aspiring web developer</p>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="nav-list-item"><a href="education.html">EDUCATION & EXPERIENCE</a></li>
+                    <li class="nav-list-item"><a href="about-me.html">ABOUT ME</a> </li>
+                </ul>
+            </nav>
+        </div> <!--end of container-->
     </header>
 
 
-    <nav>
-        <h2><a href="education.html">Education & Experience </a></h2>
-        <h2><a href="about-me.html">About me</a> </h2>
-    </nav>
-
-    <!-- Change to "Section" ?--> 
-    <div class="content-box">
+    <div class="container container-flex container-last">
 
    
-        <div class="left-column">
+        <main role="main" class="column">
 
-            <article class="coding">
-                <h3>Programming Skills</h3>
+            <article class="article-coding">
                 
-                <div class="icons-box">
+                <h2 class="article-title title-border">Programming Skills</h2>
+                
+                    <div class="article-content">
+                            <img src="photo/html-icon.png" alt="html">
+                            <img src="photo/css-icon.png" alt="css"> 
+                            <img src="photo/c-logo.png" alt="c">
+                            <img src="photo/java-logo.png" alt="java">
+                            <img src="photo/git-logo.png" alt="git">
+                            <img src="photo/mysql-logo.png" alt="mysql">
+                            <img src="photo/figma-logo.png" alt="figma">
 
-                        <img src="photo/html-icon.png" alt="html">
-                        <img src="photo/css-icon.png" alt="css"> 
-                        <img src="photo/figma-logo.png" alt="figma">
-                        <img src="photo/c-logo.png" alt="c">
-                        <img src="photo/java-logo.png" alt="java">
-                        <img src="photo/git-logo.png" alt="git">
-                        <img src="photo/mysql-logo.png" alt="mysql">
-                       
-                       
-
-                </div>
+                    </div>
                                    
             </article>
 
-          <article class="projects">
-                <h3> Projects </h3>
-                <ul>
-                    <li><a href="index.html" class="project-link">Personal website</a></li>
-                    <li><a href="https://github.com/NikkiDilling/GUI-Retail-store-" class="project-link">GUI Retail Store Order Managment System</a></li>
-                </ul>
+            <article class="article-projects">
+                <h2 class="article-title title-border"> Projects </h2>
+
+                <div class="article-content">
+                    <ul class="article-list">
+                        <li class="article-list-item"><a href="index.html" class="article-link">Personal website</a></li>
+                        <li class="article-list-item"><a href="https://github.com/NikkiDilling/GUI-Retail-store-" class="article-link">GUI Retail Store Order Managment System</a></li>
+                    </ul>
+                </div>
+                
             </article>
 
-        </div>
-    
+        </main>
 
-        <div class="rigt-column">
-         
+        <aside class="sidebar">
+            
+            <article class="sidebar-article">
 
-            <article>
-                <h3>Other Skills</h3> <br>
+                <h2 class="article-title title-border">Other Skills</h2>
 
-
-                <h5>Software Development</h5>
-                <ul>
-                    <li>Software process models</li>
-                        <ul>
-                            <li>Agile/Scrum</li>
-                        </ul>
-                    <li>UML</li>
-                </ul>
-
-                <br> 
-                
-                <h5>Language Skills</h5>
-                <ul>
-                    <li>Russian</li>
-                    <li>English</li>
-                    <li>Danish</li>
-                    <li>Korean</li>
-                </ul>
-
+                <div class="article-content">
+                    <h3 class="article-subtitle">Software Development</h3>
+                    <ul class="article-list">
+                        <li class="article-list-item">Software process models</li>
+                            <ul class="article-sublist">
+                                <li class="article-list-item">Agile/Scrum</li>
+                            </ul>
+                        <li class="article-list-item">UML</li>
+                    </ul>
+                    
+                    <h3 class="article-subtitle">Language Skills</h3>
+                    <ul class="article-list">
+                        <li class="article-list-item">Russian</li>
+                        <li class="article-list-item">English</li>
+                        <li class="article-list-item">Danish</li>
+                        <li class="article-list-item">Korean</li>
+                    </ul>
+                </div>
             
             </article>
-
-           
-                  
-        </div>
+        
+        </aside>
+      
        
     </div>
-<!-- End of "content-box"-->
-   
+<!-- End of "container"-->
 
-    <hr/>
-    <footer>
+    <footer class="footer-flex">
 
-             <address>
+            <address class="contact-info">
                 <h4>Contact Information</h4>
-                <p> Email: ndillinghansen@gmail.com </p>
+                <p class="contact-info-email"> Email: ndillinghansen@gmail.com </p>
             </address>
 
-            <div class="social">
-                <a href="https://www.linkedin.com/in/nikki-dilling-hansen/" target="_blank" ><img src="photo/linkedin-logo.png"  alt="linkedin link"></a>            
-                <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank"><img src="photo/github-icon.jpg" alt="github link"></a>
+            <div class="contact-social">
+                <a href="https://www.linkedin.com/in/nikki-dilling-hansen/" target="_blank" class="contact-social-link"><img src="photo/linkedin-logo.png"  alt="linkedin link" class="contact-images"></a>
+            
+                <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank" class="contact-social-link"><img src="photo/github-icon.jpg" alt="github link" class="contact-images"></a>
             </div>
-       
         
     </footer>
 
