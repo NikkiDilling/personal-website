@@ -1,226 +1,264 @@
-body{
+*{
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Nanum Myeongjo', serif;
-    font-weight: 400;
-    font-size: 1.125rem;
-    color: #434343;
-}
-
-img{
-    width: 100%;
-    max-width: 100px;
-}
-
-/*******************
-    Typography
-*******************/
-
-h1,h2,h4{
-    font-family: 'Nanum Myeongjo', serif;
-    font-weight: 700;
-    font-size: 1.75rem;
-}
-
-h1{
-    font-size: 2rem;
-    font-weight: 800;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: .1rem; 
 }
 
 a{
     text-decoration: none;
-    color: #434343;
-    font-weight: 700;
+    color: aliceblue;
 }
 
-.header-title p, 
-.article-subtitle{
-    font-weight: 700;
+h2,h3{
+    text-align: center;   
+    margin-bottom: 2%;
+    color: aliceblue;
 }
 
-span{
-    color:  #E75A64;
-    font-weight: 800;
+h5{
+    font-size: 1em;
+    text-shadow: 2px 2px 10px #E75A64;
+    color: aliceblue;
 }
 
-ul{
-    list-style: none;
-    padding: 0; /*get rids of extra space on the side*/
+.project-link:hover{
+color: lightskyblue;
 }
 
-.title-border{
-    width: fit-content;
-    margin: auto;
-    padding: .5em 0;
-    border-bottom: 1px solid #434343;
+/* Making the footer stick to the bottom of the page */
+/* The article fills all the space between header & footer */
+body{ min-height: 100vh; margin:0; }
+
+header{ min-height:50px; }
+footer{ min-height:50px; }
+
+body{ display:flex; flex-direction:column; }
+
+.content-box, .content-box_about-me{
+    flex: 1;
+}
+/* used stackoverflow solution */
+
+
+
+body{
+    background-size: cover;
+    max-width: 100%;
+    margin: 0 10px 0 10px;
+    /* doesn't allow the horizontal scroll bar to appear */
+    overflow-x:hidden;
+      
 }
 
-.contact-info-email{
-    font-weight: 700;
-    letter-spacing: .1em;
-}
-
-/*******************
-    Layout
-*******************/
-
-.container{
-    margin: auto; /*centering the container*/
-    width: 90%;
-    max-width: 900px;
-    text-align: center;
-}
-
-.container-last{
-    margin-bottom: 4em; /*giving it bottom margin*/
-}
-
-.container-flex{
+@media only screen and (max-width: 600px){
+   
+    body .content-box{
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
+    margin-top: 2%;
+    }
+
+    .icons-box{
+        display: flex;
+        flex-flow: column;
+        justify-content: center; 
+       
+    }
+
+    article img{
+        height: 35%;
+        width: 20%;
+        margin-top: 15px;   
+    }
+
+    header{
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    header img{
+        display: inline;
+        margin: auto;
+        margin-top: 2%;
+        border-radius: 50px;
+        -webkit-box-shadow: -4px 7px 24px 5px rgba(82,52,175,0.45); 
+        box-shadow: -4px 7px 24px 5px rgba(82,52,175,0.45);
+    }
+
+    nav{
+        display: flex;
+        flex-flow: column;
+        width: 60%;
+        justify-content: space-evenly;
+        margin: auto;
+        margin-top: 3%;
+    }
+
+}
+
+@media only screen and (max-width: 950px){
+    
+    header{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-flow: column;
+        max-width: 100%;
+       
+    }
+
+    header img{
+        display: inline;
+        margin: auto;
+        margin-top: 2%;
+        border-radius: 50px;
+        -webkit-box-shadow: -4px 7px 24px 5px rgba(82,52,175,0.45); 
+        box-shadow: -4px 7px 24px 5px rgba(82,52,175,0.45);
+    }
+
+    nav{
+        display: flex;
+        flex-flow: column;
+        width: 60%;
+        justify-content: space-evenly;
+        margin: auto;
+        margin-top: 3%;
+    }
+    
+    
+    body .content-box{
+    display: flex;
+    flex-flow: column;
+    margin-top: 2%;
+    }
+    
+} /* end of media query*/
+
+nav{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 3%;
+}
+
+nav h2 a img{
+    width: 30px;
+}
+
+/* Copy to media for responsive padding */
+nav h2{ 
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 4px 10px;
+    background-color: #E75A64;
+    border-radius: 33px;
+    -webkit-box-shadow: -2px 7px 24px -1px rgba(82,52,175,0.45); 
+    box-shadow: -2px 7px 24px -1px rgba(82,52,175,0.);
+    text-shadow: 2px 2px 10px blue;
+    transition: 0.5s;
 }
 
 
-header{
-    margin-top: 1.5em;
-}
-
-.header-image{
-    margin: 0 auto; /*centering the picture*/
-    border-radius: 80px;
-}
-
-/* navigation */
-nav a{
-    color: white;
-}
-
-.nav-list-item{
-    padding: .5em 1em;
-    background: #E75A64;
-    border-radius: 90px;
-    -webkit-box-shadow: -2px 7px 24px -1px rgb(82 52 175 / 45%);
-}
-
-.item-home{
-    padding: .3em .5em;
-}
-
-.nav-item-home-image{
-    max-width:35px;
-}
-
-nav li{
-    margin: 1em auto; /*space for mobile*/
-    transition: .5s;
-}
-
-nav li:hover{
+nav h2:hover{
     transform: scale(1.1);
 }
 
-nav ul{
+
+body .content-box_about-me{
     display: flex;
-    flex-direction: column;
-    margin-top: 2em;
+    flex-flow: column;
+    margin: auto;
+    text-align: center;
+    text-shadow: 2px 2px 10px blue;
+    width: 90%;
+    max-width: 620px;
 }
 
+.content-box_about-me article li{
+    margin-top: 10px;
+}
 
-/* article */
+body .content-box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 2px 2px 10px blue;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+   
+}
+
+header img{
+    width: 8%;
+    margin-top: 2%;
+    border-radius: 50px;
+    -webkit-box-shadow: -4px 7px 24px 5px rgba(82,52,175,0.45); 
+    box-shadow: -4px 7px 24px 5px rgba(82,52,175,0.45);
+}
+
+.Welcome{
+    align-self: center;
+    margin-left: 10px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+.Welcome span{
+    color: #E75A64;
+    font-size:  1.2em;
+    font-style: italic;
+}
+
 
 article{
-   padding: .5em 2em;
-   border: 10px solid  #7e83d0;
-   border-radius: 90px;
-   margin-top: 1.5em; /*spacing between articles*/
+    color: aliceblue;
+    padding: 25px 40px;
+    background-color: #7e83d0;
+    border-radius: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    -webkit-box-shadow: -2px 7px 24px -1px rgba(82,52,175,0.45); 
+    box-shadow: -2px 7px 24px -1px rgba(82,52,175,0.);
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    
 }
 
-.article-link:hover{
-    color: #a0a5f2;
+article img{
+    width: 80px;
+    margin: auto; 
+    margin-top: 15px; 
 }
 
-.article-list,
-.article-sublist{
-    margin: 0 auto; /*centering the list*/
+.icons-box{
+    display: flex;
+   justify-content: center;
 }
 
-.article-list-item{
-    padding: 0.5em 0; /*space for mobile*/
+hr{
+    margin-top: 5%;
 }
-
-.article-content{
-    margin: 1em auto;
-
-}
-
-/* footer */
-
 footer{
-    text-align: center;
-    background: #a0a5f2;
-    margin: auto;
-    padding: 1.5em 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.contact-info{
-    color: white;
-    margin-bottom: 2em;
+footer img{
+    height: 40px;
 }
 
-.contact-images{
-    max-width: 80px;
-    margin: 0 .5em;
-}
-
-.contact-images:hover{
-    opacity: .75;
-}
-
-/* desktop media query 
-    from width of 825px to BIGGER
-*/
-@media (min-width: 825px){
-
-    .nav-list-item{
-        margin: 0 1em; /*setting a smaller margin to give space to justify-content*/
-        max-width: 300px;
-    }
-
-    nav ul{
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .container-flex{
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .container-flex-header{
-        align-items: center;
-    }
-
-    .article-personal-traits,
-    .article-interests{
-        max-width: 50%;
-        margin: 1em auto;
-    }
-
-    .header-title{
-        text-align: start;
-    }
-
-    .header-image{
-       margin: 0 .5em;
-    }
-
-    main{
-        width: 65%;
-        max-width: 600px;
-    }
-
-    aside{
-        width: 30%;
-        margin-left: 1em;
-    }
+footer img:hover{
+    opacity: 0.6;
 }
