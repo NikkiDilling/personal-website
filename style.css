@@ -33,7 +33,6 @@ a{
     font-weight: 700;
 }
 
-
 .header-title p, 
 .article-subtitle{
     font-weight: 700;
@@ -80,6 +79,7 @@ ul{
     display: flex;
     flex-direction: column;
 }
+
 
 header{
     margin-top: 1.5em;
