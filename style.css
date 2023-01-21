@@ -177,19 +177,9 @@ footer{
 }
 
 /* desktop media query 
-    from width of 825px to BIGGER
+   (min-width) from width of 825px to BIGGER (deleted)
 */
 @media (min-width: 825px){
-
-    .nav-list-item{
-        margin: 0 1em; /*setting a smaller margin to give space to justify-content*/
-        max-width: 300px;
-    }
-
-    nav ul{
-        flex-direction: row;
-        justify-content: center;
-    }
 
     .container-flex{
         flex-direction: row;
@@ -200,12 +190,6 @@ footer{
         align-items: center;
     }
 
-    .article-personal-traits,
-    .article-interests{
-        max-width: 50%;
-        margin: 1em auto;
-    }
-
     .header-title{
         text-align: start;
     }
@@ -214,13 +198,4 @@ footer{
        margin: 0 .5em;
     }
 
-    main{
-        width: 65%;
-        max-width: 600px;
-    }
-
-    aside{
-        width: 30%;
-        margin-left: 1em;
-    }
 }
