@@ -161,6 +161,27 @@ article{
 
 }
 
+/* icons */
+.icon{
+    transition: .5s;
+}
+
+.icon:hover{
+    transform: scale(1.6);
+    padding: 2px;
+    padding-top: 1.2rem;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.icon:after{
+    content: "test";
+    color: #464646;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 2px;
+}
+
 /* footer */
 
 footer{
@@ -243,9 +264,9 @@ footer{
     }
 
     
-.progress-num{
+    .progress-num{
     color: #464646;
-}
+    }
    
 
     body::-webkit-scrollbar{

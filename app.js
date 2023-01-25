@@ -1,10 +1,10 @@
 
 //Variables
-let progessSection = document.querySelector('.progress-section');
+const progessSection = document.querySelector('.progress-section');
 let progressBar = document.querySelector('.progress-bar');
 let progessNum = document.querySelector('.progress-num');
 
-let x, y; //maybe not needed
+const iconsDiv = document.querySelector('.article-icons');
 
 //Functions
 function updateProgressBar(){
@@ -16,7 +16,6 @@ function updateProgressBar(){
         if(getScrollPercentage() >= 100){
             progressBar.style.height = `100%`;
             progessNum.innerText = `100%`;
-            
         }
 
 
@@ -27,4 +26,15 @@ function getScrollPercentage(){
     return (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100);
 }
 
+
+iconsDiv.addEventListener('click', function(e){
+   
+    if(e.target.tagName.toLowerCase === 'img'){
+        e.target.style.content = e.target.getAttribute('id');
+    }
+});
+
+
+
+//Running Functions
 updateProgressBar();
