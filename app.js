@@ -12,10 +12,12 @@ function updateProgressBar(){
     progessNum.innerText = `${Math.ceil(getScrollPercentage())}%`
 
     //stopping the progress bar at 100%
-    if(getScrollPercentage() > 100){
-        progressBar.style.height = `100%`;
-        progessNum.innerText = `100%`;
-    }
+    
+        if(getScrollPercentage() >= 100){
+            progressBar.style.height = `100%`;
+            progessNum.innerText = `100%`;
+            
+        }
 
 
     requestAnimationFrame(updateProgressBar);

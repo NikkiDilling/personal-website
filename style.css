@@ -67,7 +67,7 @@ ul{
 .container{
     margin: auto; /*centering the container*/
     width: 90%;
-    max-width: 900px;
+    max-width: 700px;
     text-align: center;
 }
 
@@ -184,11 +184,15 @@ footer{
     opacity: .75;
 }
 
+.progress-num{
+    color: white;
+}
+   
 
 /* desktop media query 
-   (min-width) from width of 880px to BIGGER (deleted)
+   (min-width) from width of 870px to BIGGER (deleted)
 */
-@media (min-width: 880px){
+@media (min-width: 870px){
 
     .container-flex{
         flex-direction: row;
@@ -207,20 +211,17 @@ footer{
        margin: 0 .5em;
     }
 
-    
+     /* Progress Bar */
 
-    /* Progress Bar Feature for Big Screens*/
-
-    .progress-section{
+     .progress-section{
 
         position: fixed;
-        right: 50px;
+        right: 20px;
         top: 30%;
         height: 20%;
-        width: 60px;
+        width: 56px;
         display: flex;
         justify-content: space-between;
-        will-change: transform; /*optimizing the browser for transformation*/
         transition: .03s ease-out;
     }
 
@@ -240,6 +241,12 @@ footer{
         height: 0%;
         background-color: #abaff0;
     }
+
+    
+.progress-num{
+    color: #464646;
+}
+   
 
     body::-webkit-scrollbar{
         display: none; /*removing the scroll bar*/
