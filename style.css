@@ -189,6 +189,10 @@ article{
     border-radius: 15px;
 }
 
+.content-container.active img::after{
+    content: "test";
+}
+
 
 /* footer */
 
