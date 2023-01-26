@@ -135,6 +135,10 @@ article{
    margin-bottom: 16em; /*spacing between articles*/
 }
 
+.content-container{
+    display: inline-block;
+}
+
 .article-first{
     margin-top: 8rem;
 }
@@ -161,26 +165,30 @@ article{
 
 }
 
-/* icons */
-.icon{
+
+/* icons JavaScript manupilation*/
+
+.content-container{
+    cursor: pointer;
     transition: .5s;
 }
 
-.icon:hover{
-    transform: scale(1.6);
-    padding: 2px;
-    padding-top: 1.2rem;
-    background-color: #fff;
-    border: 1px solid black;
-}
-
-.icon:after{
-    content: "test";
+.content-container p{
+    overflow: hidden;
     color: #464646;
     font-size: 1.2rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin: 2px;
 }
+
+.active{
+    transform: scale(1.6);
+    padding: 2px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
 
 /* footer */
 
