@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+
+     <!-- Stylesheet-->
+     <link rel="stylesheet" href="style.css">
+
+    <title>Hangman Game</title>
+
+</head>
+<body>
+
+    <div class="hangman-container">
+
+        <div class="drawing rope"></div>
+        <div class="drawing head"></div>
+        <div class="drawing body"></div>
+        <div class="drawing left-arm"></div>
+        <div class="drawing right-arm"></div>
+        <div class="drawing left-leg"></div>
+        <div class="drawing right-leg"></div>
+        <div class="drawing vertical-line"></div>
+        <div class="drawing horizontal-line"></div>
+        <div class="drawing binding-line"></div>
+        <div class="drawing bottom-line"></div>
+
+    </div>
+
+    
+    <div class="mistake-count">
+        <p>Lives: <span class="mistakes-count-num"> 11</span></p>
+    </div>
+
+    <div class="game-win-lose">
+        <h2 class="game-status">default</h2>
+    </div>
+    
+    <div class="word-container"></div>
+
+    <div class="button-container">
+        <button id="btn">New Word</button>
+    </div>
+
+    <div class="alphabet-container">
+        <div class="alphabet-letter">A</div>
+        <div class="alphabet-letter">B</div>
+        <div class="alphabet-letter">C</div>
+        <div class="alphabet-letter">D</div>
+        <div class="alphabet-letter">E</div>
+        <div class="alphabet-letter">F</div>
+        <div class="alphabet-letter">G</div>
+        <div class="alphabet-letter">H</div>
+        <div class="alphabet-letter">I</div>
+        <div class="alphabet-letter">J</div>
+        <div class="alphabet-letter">K</div>
+        <div class="alphabet-letter">L</div>
+        <div class="alphabet-letter">M</div>
+        <div class="alphabet-letter">N</div>
+        <div class="alphabet-letter">O</div>
+        <div class="alphabet-letter">P</div>
+        <div class="alphabet-letter">Q</div>
+        <div class="alphabet-letter">R</div>
+        <div class="alphabet-letter">S</div>
+        <div class="alphabet-letter">T</div>
+        <div class="alphabet-letter">U</div>
+        <div class="alphabet-letter">V</div>
+        <div class="alphabet-letter">W</div>
+        <div class="alphabet-letter">X</div>
+        <div class="alphabet-letter">Y</div>
+        <div class="alphabet-letter">Z</div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="app.js"></script>
+</body>
+</html>
