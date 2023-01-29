@@ -189,10 +189,6 @@ article{
     border-radius: 15px;
 }
 
-.content-container.active img::after{
-    content: "test";
-}
-
 
 /* footer */
 
@@ -250,7 +246,7 @@ footer{
 
         position: fixed;
         right: 20px;
-        top: 30%;
+        top: 25%;
         height: 20%;
         width: 56px;
         display: flex;
