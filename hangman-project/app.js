@@ -32,7 +32,7 @@ function setWord(){
         
         let letter = document.createElement('div');
         letter.classList.add('letter');
-        letter.innerText = "X";
+        letter.innerText = "X."; //adding default value to set the length of the line
         wordContainer.appendChild(letter);
         
         //console.log(i +"th letter created");
@@ -87,85 +87,88 @@ function showHangman(){
 
 }
 
-//adding event listener to all alphabet letters individually
-alphabet.forEach(e => {
-    e.addEventListener('click',function guessLetter(e){
+//function for keybord (on the screen) event listener
+function guessLetter(e){
 
-        //For debugging
-        //console.log(e.target.innerText + " is pressed");
-    
-        if(wordToGuess.includes(`${e.target.innerText}`)){
-    
-            /* For Debugging
-            console.log(`letter ${e.target.innerText} exists`);
-            console.log("index of letter: " + wordToGuess.indexOf(`${e.target.innerText}`));
-            */
-    
-            //saving indexes of all occurences of the letter that is clicked into an array
-            for(let i = 0; i < wordToGuess.length; i++){
-    
-                if(wordToGuess[i] === `${e.target.innerText}`){
-                    letterArrayIndexes.push(i);
-                }
+    //For debugging
+    //console.log(e.target.innerText + " is pressed");
+
+    if(wordToGuess.includes(`${e.target.innerText}`)){
+
+        /* For Debugging
+        console.log(`letter ${e.target.innerText} exists`);
+        console.log("index of letter: " + wordToGuess.indexOf(`${e.target.innerText}`));
+        */
+
+        //saving indexes of all occurences of the letter that is clicked into an array
+        for(let i = 0; i < wordToGuess.length; i++){
+
+            if(wordToGuess[i] === `${e.target.innerText}`){
+                letterArrayIndexes.push(i);
             }
-            
-            //saving letter elements that are placed in the word-container to an array
-            lettersToGuess = document.querySelectorAll(".letter");
+        }
+        
+        //saving letter elements that are placed in the word-container to an array
+        lettersToGuess = document.querySelectorAll(".letter");
 
-            //Checking indexes of letters and revealing letters of the word to the player
-            //outer loop going through indexes
-            for(let i=0; i < letterArrayIndexes.length; i++){
-    
-                //inner loop going through the letter elements in the word-container
-                for(let j = 0; j < lettersToGuess.length; j++){
-    
-                    if(j === letterArrayIndexes[i]){
-                        lettersToGuess[j].innerText = e.target.innerText;
-                        lettersToGuess[j].style.color = "#161616";
-                        console.log('letter is placed at: ' + j);
-                        //increasing guessed counter
-                        guessedCounter++;
+        //Checking indexes of letters and revealing letters of the word to the player
+        //outer loop going through indexes
+        for(let i=0; i < letterArrayIndexes.length; i++){
 
-                        if(guessedCounter === wordToGuess.length){
-                            gameStatusInfo.innerText = "You've Won!"
-                            gameStatusInfo.style.backgroundColor= "rgb(" + 13 + "," + 188 + "," + 100 + ")";
-                        }
+            //inner loop going through the letter elements in the word-container
+            for(let j = 0; j < lettersToGuess.length; j++){
+
+                if(j === letterArrayIndexes[i]){
+                    lettersToGuess[j].innerText = e.target.innerText;
+                    lettersToGuess[j].style.color = "#161616";
+                    console.log('letter is placed at: ' + j);
+                    //increasing guessed counter
+                    guessedCounter++;
+
+                    if(guessedCounter === wordToGuess.length){
+                        gameStatusInfo.innerText = "You've Won!"
+                        gameStatusInfo.style.backgroundColor= "rgb(" + 13 + "," + 188 + "," + 100 + ")";
                     }
-                }
-    
-            }
-    
-            letterArrayIndexes = []; //emptying the index array 
-    
-        }else{
-            console.log(`letter ${e.target.innerText} does not exist`);
-    
-            //updating mistake count
-            mistakeCount++;
-   
-            //function that displays the hangman drawing when a mistake is made
-            showHangman();
-                                    
-            //Updating mistake count visually 
-            if(mistakeCount <= 11){
-               
-                mistakeCountDisplay.innerText = `${11-mistakeCount}`;
-                
-                //checking mistake count to display "Game Over" element
-                if(mistakeCount === 11){
-                    gameStatusInfo.innerText = "Game Over!"
-                    gameStatusInfo.style.backgroundColor ="rgb(" + 188 + "," + 13 + "," + 13 + ")";
                 }
             }
 
         }
-        
-        //visibly setting the element to be inactive
-        e.target.classList.add('inactive');
-         //removing event listener
-         e.target.removeEventListener('click',guessLetter);
-        
-    })
+
+        letterArrayIndexes = []; //emptying the index array 
+
+    }else{
+        console.log(`letter ${e.target.innerText} does not exist`);
+
+        //updating mistake count
+        mistakeCount++;
+
+        //function that displays the hangman drawing when a mistake is made
+        showHangman();
+                                
+        //Updating mistake count visually 
+        if(mistakeCount <= 11){
+           
+            mistakeCountDisplay.innerText = `${11-mistakeCount}`;
+            
+            //checking mistake count to display "Game Over" element
+            if(mistakeCount === 11){
+                gameStatusInfo.innerText = "Game Over!"
+                gameStatusInfo.style.backgroundColor ="rgb(" + 188 + "," + 13 + "," + 13 + ")";
+            }
+        }
+
+    }
+    
+    //visibly setting the element to be inactive
+    e.target.classList.add('inactive');
+     //removing event listener
+    e.target.removeEventListener('click',guessLetter);
+    
+}
+
+//adding event listener to all alphabet letters individually
+alphabet.forEach(e => {
+    e.addEventListener('click', guessLetter)
 });
 
 
@@ -182,7 +185,14 @@ btnNewWord.addEventListener('click', function(){
 
     //resseting inactive class on alphabet
     for(let i=0; i< alphabet.length; i++){
-        alphabet[i].classList.remove('inactive');
+
+        //adding back the event listener
+        if(alphabet[i].classList.contains('inactive')){
+            alphabet[i].addEventListener('click', guessLetter);
+            console.log("added event listener");
+            alphabet[i].classList.remove('inactive');
+        }
+
     }
 
     //resetting the hangman drawing
