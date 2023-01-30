@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    border: 1px solid magenta;
 }
 
 .button-container{
@@ -38,7 +37,6 @@
    flex-wrap: wrap; 
    display: flex;
    justify-content: center;
-   border: 1px solid magenta;
    margin: 40px auto;
 }
 
