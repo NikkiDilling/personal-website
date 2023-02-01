@@ -3,8 +3,20 @@
 const progessSection = document.querySelector('.progress-section');
 let progressBar = document.querySelector('.progress-bar');
 let progessNum = document.querySelector('.progress-num');
-
 const iconsDiv = document.querySelector('.article-icons');
+
+const hiddenElements = document.querySelectorAll('.hidden');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+
+        if(entry.isIntersecting){
+            entry.target.classList.add('show'); // making the element visible
+        }
+    });
+});
+
+hiddenElements.forEach((el) => observer.observe(el));
 
 //Functions
 function updateProgressBar(){
@@ -52,8 +64,6 @@ iconsDiv.addEventListener('click', function(e){
 
    
 });
-
-
 
 
 //Running Functions
