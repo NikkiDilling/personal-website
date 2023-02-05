@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">
+    <title>API weather</title>
+</head>
+<body>
+    
+    <div class="user-location-container">
+        <h1>Your location: </h1>
+        <div class="user-location-info active">
+            <p class="user-information">Click here to display your city</p>
+            <p class="user-location">Roskilde</p>
+            <p class="user-location-degrees"> 5 C° </p>
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <button id="addBtn"><i class="fa-sharp fa-solid fa-plus"></i></button>
+        </div>
+
+        <div class="other-location-container">
+
+            
+        </div>
+
+    </div>
+
+    <!-- <script src="./config.js"></script> -->
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
