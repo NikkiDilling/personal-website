@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+
+}
+
+img{
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 1.2rem auto;
+}
+header{
+    width: 60%;
+    max-width: 600px;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+header a{
+    display: block;
+}
+
+header h4, header a{
+    margin-top: 20px;
+}
+
+span{
+    font-weight: 400;
+}
+
+.js{
+    color: red;
+}
+
+.html{
+    color: orange;
+}
+
+.css{
+    color: blue
+}
+
+.vscode{
+    color: rgb(87, 160, 232);
+}
+
+main{
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section{
+    margin: 1.6rem;
+}
+
+.section h3{
+    margin-bottom: 10px;
+}
+
+.section-subtitle{
+    margin: 5px auto;
+}
+
+ol{
+  width: 80%;
+  margin: auto;
+}

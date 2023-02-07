@@ -1,7 +1,7 @@
 body{
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: 400;
     font-size: 1.125rem;
     color: #434343;
@@ -17,7 +17,7 @@ img{
 *******************/
 
 h1,h2,h4{
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: 700;
     font-size: 1.75rem;
 }
@@ -67,7 +67,7 @@ ul{
 .container{
     margin: auto; /*centering the container*/
     width: 90%;
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
 }
 
@@ -130,7 +130,6 @@ nav ul{
 
 article{
    padding: .5em 2em;
-   border: 10px solid  #7e83d0;
    border-radius: 90px;
    margin-bottom: 16em; /*spacing between articles*/
 }
@@ -151,10 +150,6 @@ article{
     margin-bottom: 0;
 }
 
-.article-link:hover{
-    color: #a0a5f2;
-}
-
 .article-list,
 .article-sublist{
     margin: 0 auto; /*centering the list*/
@@ -172,8 +167,38 @@ article{
 .click-icon{
     width: 2.5rem;
 }
-/* icons JavaScript manupilation*/
 
+.article-content-project{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-bottom: 20px;
+    border: 10px solid  #7e83d0;
+    border-radius: 30px;
+    text-align: start;
+}
+.buttons-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.article-content-primary{
+    width: 76%;
+    order: 2;
+}
+
+.project-article-title{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.article-content-secondary{
+    width: 20%;
+    order: 1;
+}
+/* icons JavaScript manupilation*/
 .content-container{
     cursor: pointer;
     transition: .5s;
