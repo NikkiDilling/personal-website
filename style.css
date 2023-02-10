@@ -168,7 +168,17 @@ article{
     width: 2.5rem;
 }
 
-.article-content-project{
+.article-projects{
+    position: relative;
+    
+}
+.slide-elements-container{
+    position: relative;
+    height: 370px;
+    transform: scale(0.7);
+}
+
+.article-slide-element{
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -178,11 +188,44 @@ article{
     border: 10px solid  #7e83d0;
     border-radius: 30px;
     text-align: start;
+    background-color: white;
+    position: absolute;
+   transition: transform 400ms ease;
 }
-.buttons-container{
+
+.article-slide-element[data-status="active"]{
+    z-index: 1;
+}
+.article-slide-element[data-status="after"]{
+    z-index: 0;
+    transform: translateX(74%) translateY(20%);
+}
+
+.article-slide-element[data-status="before"]{
+    transform: translateX(-74%) translateY(20%);
+    z-index: 0;
+}
+
+.article-slide-element[data-status="become-active-from-before"]{
+    transform: translateX(-74%) translateY(20%);
+    transition: none;
+    z-index: 0;
+}
+
+.article-education{
+    margin-top: 40px;
+    clear: both;
+}
+
+.buttons-container, .buttons-slide-container{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    cursor: pointer;
+}
+
+.buttons-slide-container{
+    margin-top: 20px;
 }
 .article-content-primary{
     width: 76%;
