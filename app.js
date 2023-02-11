@@ -1,28 +1,40 @@
 
 //Variables
-//let activeIndex = 1;
+
 
 const articleProjectElements = document.getElementsByClassName("article-slide-element");
-   //bump active index
+    
+    let activeIndex = 1;
     //check if the index is smaller or equal to the group length
-    //let nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
-    //let previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
+    
+    let previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
+    let nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
+    let unknownIndex = nextIndex + 1 <= articleProjectElements.length - 1 ? nextIndex + 1 : 0;
+    
 
 const handleLeftClick = () =>{
 
+    //saving the elements' current position
+    const previousElement = document.querySelector(`[data-index="${previousIndex}"]`);
+    const currentElement = document.querySelector(`[data-index="${activeIndex}"]`);
+    const nextElement = document.querySelector(`[data-index="${nextIndex}"]`);
+    const unknownElement = document.querySelector(`[data-index="${unknownIndex}"]`);
 
-    const previousElement = document.querySelector(`[data-status=before]`);
-    const currentElement = document.querySelector(`[data-status=active]`);
-    const nextElement = document.querySelector(`[data-status=after]`);
-
-    console.log(document.querySelector(`[data-status=before]`));
-    console.log(document.querySelector(`[data-status=active]`));
-    console.log(document.querySelector(`[data-status=after]`));
-    
+    //Moving the slide elements
     currentElement.dataset.status = "after";
-    nextElement.dataset.status = "before";
+    nextElement.dataset.status = "unknown";
     previousElement.dataset.status = "active";
- 
+    unknownElement.dataset.status = "before";
+    
+
+    //making the element before the NEW CCTIVE
+    activeIndex = previousIndex;
+    //updating element indexes around active element
+    previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
+    nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
+    unknownIndex = nextIndex + 1 <= articleProjectElements.length - 1 ? nextIndex + 1 : 0;
+    
+       
 }
 
 
@@ -32,14 +44,22 @@ const handleRightClick = () =>{
     const previousElement = document.querySelector(`[data-status=before]`);
     const currentElement = document.querySelector(`[data-status=active]`);
     const nextElement = document.querySelector(`[data-status=after]`);
+    const unknownElement = document.querySelector(`[data-index="${unknownIndex}"]`);
 
-    console.log(document.querySelector(`[data-status=before]`));
-    console.log(document.querySelector(`[data-status=active]`));
-    console.log(document.querySelector(`[data-status=after]`));
+
     
     currentElement.dataset.status = "before";
     nextElement.dataset.status = "active";
-    previousElement.dataset.status = "after";
+    previousElement.dataset.status = "unknown";
+    unknownElement.dataset.status = "after"
+
+       //making the element before the NEW CCTIVE
+       activeIndex = nextIndex;
+       //updating element indexes around active element
+       previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
+       nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
+       unknownIndex = nextIndex + 1 <= articleProjectElements.length - 1 ? nextIndex + 1 : 0;
+
  
 }
 

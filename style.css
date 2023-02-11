@@ -190,7 +190,7 @@ article{
     text-align: start;
     background-color: white;
     position: absolute;
-   transition: transform 400ms ease;
+    transition: transform 0.4s;
 }
 
 .article-slide-element[data-status="active"]{
@@ -203,6 +203,11 @@ article{
 
 .article-slide-element[data-status="before"]{
     transform: translateX(-74%) translateY(20%);
+    z-index: 0;
+}
+
+.article-slide-element[data-status="unknown"]{
+    transform: scale(0);
     z-index: 0;
 }
 
