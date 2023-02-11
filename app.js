@@ -1,58 +1,47 @@
 
 //Variables
-let activeIndex = 1;
+//let activeIndex = 1;
 
 const articleProjectElements = document.getElementsByClassName("article-slide-element");
-let nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
-let previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
+   //bump active index
+    //check if the index is smaller or equal to the group length
+    //let nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
+    //let previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
 
 const handleLeftClick = () =>{
-    console.log("button pressed");
-    //bump active index
-    //check if the index is smaller or equal to the group length
 
-    console.log(previousIndex);
-    console.log(activeIndex);
-    console.log(nextIndex);
 
-    const previousElement = document.querySelector(`[data-index="${previousIndex}"]`);
-    const currentElement = document.querySelector(`[data-index="${activeIndex}"]`);
-    const nextElement = document.querySelector(`[data-index="${nextIndex}"]`);
+    const previousElement = document.querySelector(`[data-status=before]`);
+    const currentElement = document.querySelector(`[data-status=active]`);
+    const nextElement = document.querySelector(`[data-status=after]`);
+
+    console.log(document.querySelector(`[data-status=before]`));
+    console.log(document.querySelector(`[data-status=active]`));
+    console.log(document.querySelector(`[data-status=after]`));
     
-    //Active group becomes after
-    console.log(document.querySelector(`[data-index="${previousIndex}"]`).dataset.status);
-    console.log(document.querySelector(`[data-index="${activeIndex}"]`).dataset.status);
-    console.log(document.querySelector(`[data-index="${nextIndex}"]`).dataset.status);
-    console.log("");
-
     currentElement.dataset.status = "after";
-
-
-    previousElement.dataset.status = "become-active-from-before";
-
-    previousElement.dataset.status = "active";
     nextElement.dataset.status = "before";
-
-    let prevTemp = previousIndex;
-    /*
-    console.log(document.querySelector(`[data-index="${previousIndex}"]`).dataset.status);
-    console.log(document.querySelector(`[data-index="${activeIndex}"]`).dataset.status);
-    console.log(document.querySelector(`[data-index="${nextIndex}"]`).dataset.status);
-    */
-    previousIndex = activeIndex;
-    activeIndex = nextIndex;
-    nextIndex = prevTemp;
-    
-    //console.log("");
-
-    console.log(previousIndex);
-    console.log(activeIndex);
-    console.log(nextIndex);
-    
-
-
+    previousElement.dataset.status = "active";
+ 
 }
 
+
+const handleRightClick = () =>{
+
+
+    const previousElement = document.querySelector(`[data-status=before]`);
+    const currentElement = document.querySelector(`[data-status=active]`);
+    const nextElement = document.querySelector(`[data-status=after]`);
+
+    console.log(document.querySelector(`[data-status=before]`));
+    console.log(document.querySelector(`[data-status=active]`));
+    console.log(document.querySelector(`[data-status=after]`));
+    
+    currentElement.dataset.status = "before";
+    nextElement.dataset.status = "active";
+    previousElement.dataset.status = "after";
+ 
+}
 
 
 
@@ -70,7 +59,7 @@ const iconsDiv = document.querySelector('.article-icons');
 const hiddenElements = document.querySelectorAll('.hidden');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry);
+        //console.log(entry);
 
         if(entry.isIntersecting){
             entry.target.classList.add('show'); // making the element visible

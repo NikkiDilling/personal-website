@@ -206,12 +206,6 @@ article{
     z-index: 0;
 }
 
-.article-slide-element[data-status="become-active-from-before"]{
-    transform: translateX(-74%) translateY(20%);
-    transition: none;
-    z-index: 0;
-}
-
 .article-education{
     margin-top: 40px;
     clear: both;
