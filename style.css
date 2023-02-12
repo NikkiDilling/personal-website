@@ -159,16 +159,11 @@ article{
     padding: 0.5em 0; /*space for mobile*/
 }
 
-.article-content{
-    margin: 1em auto;
-
-}
-
 .click-icon{
     width: 2.5rem;
 }
 
-.article-projects{
+.article-projects, .article-coding{
     position: relative;
     
 }
@@ -179,6 +174,8 @@ article{
 }
 
 .article-slide-element{
+    height: 260px;
+    align-items: center;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -189,6 +186,7 @@ article{
     border-radius: 30px;
     text-align: start;
     background-color: white;
+    
     position: absolute;
     transition: transform 0.4s;
 }

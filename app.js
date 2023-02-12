@@ -9,41 +9,42 @@ const articleProjectElements = document.getElementsByClassName("article-slide-el
     
     let previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
     let nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
-    let unknownIndex = nextIndex + 1 <= articleProjectElements.length - 1 ? nextIndex + 1 : 0;
+    let unknownIndex;
     
 
 const handleLeftClick = () =>{
+    unknownIndex = previousIndex - 1 >=0 ? previousIndex - 1 : articleProjectElements.length - 1;
 
-    //saving the elements' current position
     const previousElement = document.querySelector(`[data-index="${previousIndex}"]`);
     const currentElement = document.querySelector(`[data-index="${activeIndex}"]`);
     const nextElement = document.querySelector(`[data-index="${nextIndex}"]`);
     const unknownElement = document.querySelector(`[data-index="${unknownIndex}"]`);
 
-    //Moving the slide elements
+
+
     currentElement.dataset.status = "after";
     nextElement.dataset.status = "unknown";
     previousElement.dataset.status = "active";
-    unknownElement.dataset.status = "before";
-    
+    console.log(unknownElement);
+    unknownElement.dataset.status = "before"
+    console.log(unknownElement);
 
-    //making the element before the NEW CCTIVE
+    //making the element before the NEW ACTIVE
     activeIndex = previousIndex;
     //updating element indexes around active element
     previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
     nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
-    unknownIndex = nextIndex + 1 <= articleProjectElements.length - 1 ? nextIndex + 1 : 0;
-    
+    unknownIndex = previousIndex - 1 >=0 ? previousIndex - 1 : articleProjectElements.length - 1;
        
 }
 
 
 const handleRightClick = () =>{
+    unknownIndex = nextIndex + 1 <= articleProjectElements.length - 1 ? nextIndex + 1 : 0;
 
-
-    const previousElement = document.querySelector(`[data-status=before]`);
-    const currentElement = document.querySelector(`[data-status=active]`);
-    const nextElement = document.querySelector(`[data-status=after]`);
+    const previousElement = document.querySelector(`[data-index="${previousIndex}"]`);
+    const currentElement = document.querySelector(`[data-index="${activeIndex}"]`);
+    const nextElement = document.querySelector(`[data-index="${nextIndex}"]`);
     const unknownElement = document.querySelector(`[data-index="${unknownIndex}"]`);
 
 
@@ -53,7 +54,7 @@ const handleRightClick = () =>{
     previousElement.dataset.status = "unknown";
     unknownElement.dataset.status = "after"
 
-       //making the element before the NEW CCTIVE
+       //making the element before the NEW ACTIVE
        activeIndex = nextIndex;
        //updating element indexes around active element
        previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
@@ -62,12 +63,6 @@ const handleRightClick = () =>{
 
  
 }
-
-
-
-
-
-
 
 
 const progessSection = document.querySelector('.progress-section');
@@ -111,7 +106,8 @@ function getScrollPercentage(){
     return (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100);
 }
 
-
+/*
+//Function for Scaling the icons up/down and displaying the skill's name
 iconsDiv.addEventListener('click', function(e){
 
     if(e.target.tagName.toLowerCase() === 'img'){
@@ -136,7 +132,7 @@ iconsDiv.addEventListener('click', function(e){
 
    
 });
-
+*/
 
 //Running Functions
 updateProgressBar();

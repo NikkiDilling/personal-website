@@ -31,11 +31,11 @@ span{
     font-weight: 400;
 }
 
-.js{
+.js, .java{
     color: red;
 }
 
-.html{
+.html, .eclipse{
     color: orange;
 }
 
@@ -43,7 +43,7 @@ span{
     color: blue
 }
 
-.vscode{
+.vscode, .swing{
     color: rgb(87, 160, 232);
 }
 
