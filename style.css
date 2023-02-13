@@ -219,6 +219,15 @@ article{
     flex-direction: row;
     justify-content: space-around;
     cursor: pointer;
+    
+}
+.fa-caret-left, .fa-caret-right{
+    padding: 10px;
+}
+
+#right-btn, #left-btn{
+    border: 1px solid rgb(40, 40, 40) ;
+    border-radius: 50%;
 }
 
 .buttons-slide-container{
