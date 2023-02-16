@@ -1,19 +1,16 @@
 
 //Variables
-
-
-const articleProjectElements = document.getElementsByClassName("article-slide-element");
+const articleElements = document.getElementsByClassName("article-slide-element");
     
-    let activeIndex = 1;
-    //check if the index is smaller or equal to the group length
-    
-    let previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
-    let nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
+    //Variables for projects slide
+    let activeIndex = 1;    
+    let previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleElements.length - 1 ;
+    let nextIndex = activeIndex + 1 <= articleElements.length - 1 ? activeIndex + 1 : 0;
     let unknownIndex;
-    
 
+//Buttons for projects slide
 const handleLeftClick = () =>{
-    unknownIndex = previousIndex - 1 >=0 ? previousIndex - 1 : articleProjectElements.length - 1;
+    unknownIndex = previousIndex - 1 >=0 ? previousIndex - 1 : articleElements.length - 1;
 
     const previousElement = document.querySelector(`[data-index="${previousIndex}"]`);
     const currentElement = document.querySelector(`[data-index="${activeIndex}"]`);
@@ -32,15 +29,15 @@ const handleLeftClick = () =>{
     //making the element before the NEW ACTIVE
     activeIndex = previousIndex;
     //updating element indexes around active element
-    previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
-    nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
-    unknownIndex = previousIndex - 1 >=0 ? previousIndex - 1 : articleProjectElements.length - 1;
+    previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleElements.length - 1 ;
+    nextIndex = activeIndex + 1 <= articleElements.length - 1 ? activeIndex + 1 : 0;
+    unknownIndex = previousIndex - 1 >=0 ? previousIndex - 1 : articleElements.length - 1;
        
 }
 
 
 const handleRightClick = () =>{
-    unknownIndex = nextIndex + 1 <= articleProjectElements.length - 1 ? nextIndex + 1 : 0;
+    unknownIndex = nextIndex + 1 <= articleElements.length - 1 ? nextIndex + 1 : 0;
 
     const previousElement = document.querySelector(`[data-index="${previousIndex}"]`);
     const currentElement = document.querySelector(`[data-index="${activeIndex}"]`);
@@ -57,14 +54,15 @@ const handleRightClick = () =>{
        //making the element before the NEW ACTIVE
        activeIndex = nextIndex;
        //updating element indexes around active element
-       previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleProjectElements.length - 1 ;
-       nextIndex = activeIndex + 1 <= articleProjectElements.length - 1 ? activeIndex + 1 : 0;
-       unknownIndex = nextIndex + 1 <= articleProjectElements.length - 1 ? nextIndex + 1 : 0;
+       previousIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articleElements.length - 1 ;
+       nextIndex = activeIndex + 1 <= articleElements.length - 1 ? activeIndex + 1 : 0;
+       unknownIndex = nextIndex + 1 <= articleElements.length - 1 ? nextIndex + 1 : 0;
 
  
 }
 
 
+//Code for progress bar
 const progessSection = document.querySelector('.progress-section');
 let progressBar = document.querySelector('.progress-bar');
 let progessNum = document.querySelector('.progress-num');
@@ -85,7 +83,6 @@ const observer = new IntersectionObserver((entries) => {
 hiddenElements.forEach((el) => observer.observe(el));
 
 
-//Functions
 function updateProgressBar(){
     //updating scroll bar text and progress bar
     progressBar.style.height = `${getScrollPercentage()}%`;
@@ -106,7 +103,7 @@ function getScrollPercentage(){
     return (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100);
 }
 
-/*
+
 //Function for Scaling the icons up/down and displaying the skill's name
 iconsDiv.addEventListener('click', function(e){
 
@@ -132,7 +129,7 @@ iconsDiv.addEventListener('click', function(e){
 
    
 });
-*/
+
 
 //Running Functions
 updateProgressBar();
