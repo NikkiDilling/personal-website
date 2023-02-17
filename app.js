@@ -103,16 +103,18 @@ function getScrollPercentage(){
     return (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100);
 }
 
+/*
 
 //Function for Scaling the icons up/down and displaying the skill's name
 iconsDiv.addEventListener('click', function(e){
-
+    let zIndex = 0;
     if(e.target.tagName.toLowerCase() === 'img'){
       
         //adds an active tag, to show the name of the icon
         if(e.target.parentElement.classList.contains('active') == false){
 
             e.target.parentElement.classList.add('active');
+            e.target.style.zIndex = `"${zIndex++}"`;
             //setting p's inner text
             e.target.nextElementSibling.innerText = e.target.getAttribute('id');
             //console.log("added");
@@ -122,6 +124,8 @@ iconsDiv.addEventListener('click', function(e){
 
             //console.log("removed");
             e.target.parentElement.classList.remove('active');
+            e.target.style.zIndex = "0";
+
             //removing p's inner text            
             e.target.nextElementSibling.innerText = "";
         }
@@ -130,6 +134,7 @@ iconsDiv.addEventListener('click', function(e){
    
 });
 
+*/
 
 //Running Functions
 updateProgressBar();

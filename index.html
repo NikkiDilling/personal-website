@@ -55,9 +55,133 @@
    
         <main role="main" class="column">
 
+            <article class="article-first article-projects hidden">
 
+                
+                    <h2 class="article-title title-border">
+                        <img src="photo/click-icon.png" alt="click" class="click-icon">
+                         Projects 
+                    </h2>
+                
+                
+                <div class="slide-elements-container">
+                                  
+               
+                    <div class="article-slide-element" data-status="before" data-index="0">
+                        
+                        <div class="article-content-secondary">
+                            <img src="photo/project-website.png" alt="project-icon" class="article-image">
+                        </div>
+    
+                        <div class="article-content-primary">
+                            <div class="content-primary-container">
+                            <h3 class="project-article-title">Personal Website</h3>
+                            <p class="project-article-preview">The challenging part in the development of the site was the functionality that I implemented with JavaScript in the “programming skills” section...</p>
+                            </div>
 
-            <article class="article-first article-coding  article-border hidden">
+                            <div class="buttons-container">
+                                <div class="button">
+                                    <button id="read-more"><a href="this-website.html" class="article-link">READ MORE</a></button>
+                                </div>
+                                <div class="button">
+                                    <button id="visit-project"><a href="#" class="article-link">REFRESH PAGE</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                            
+                    <div class="article-slide-element" data-status="active" data-index="1">
+                        <div class="article-content-secondary">
+                            <img src="photo/project-hangman.png" alt="project-icon" class="article-image">
+                        </div>
+    
+                        <div class="article-content-primary">
+                            <div class="content-primary-container">
+                            <h3 class="project-article-title">Hangman Game (JavaScript Project)</h3>
+                            <p class="project-article-preview">The HTML in this project is very simple, as I was mostly focused on adding functionality in JavaScript...</p>
+                            </div>
+
+                            <div class="buttons-container">
+                                <div class="button">
+                                    <button id="read-more"><a href="hangman.html" class="article-link">READ MORE</a></button>
+                                </div>
+                                <div class="button">
+                                    <button id="visit-project"><a href="hangman-project/index.html" class="article-link" target="_blank">VISIT PROJECT</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+    
+                      
+                        <div class="article-slide-element" data-status="after" data-index="2">
+                            <div class="article-content-secondary">
+                                <img src="photo/project-weather.png" alt="project-icon" class="article-image">
+                            </div>
+    
+                            <div class="article-content-primary">
+                                <div class="content-primary-container">
+                                <h3 class="project-article-title">Weather Application (JavaScript API Project)</h3>
+                                <p class="project-article-preview">For the browser to gain access to the user’s current location it needs the user’s permission. That’s why...</p>
+                                </div>
+                                <div class="buttons-container">
+                                        <div class="button">
+                                            <button id="read-more"><a href="weather-app-article.html" class="article-link">READ MORE</a></button>
+                                        </div>
+                                        <div class="button">
+                                         <button id="visit-project"><a href="weather-project/index.html" class="article-link" target="_blank">VISIT PROJECT</a></button>
+                                        </div>
+                                </div>
+                            </div>
+                                
+                                
+                         </div>
+                        
+
+                        <div class="article-slide-element" data-status="unknown" data-index="3">
+                            <div class="article-content-secondary">
+                               <img src="photo/project-gui.png" alt="project-icon" class="article-image">
+                           </div>
+       
+                            <div class="article-content-primary">
+                                <div class="content-primary-container">
+                                   <h3 class="project-article-title">GUI-Order Management System</h3>
+                                   <p class="project-article-preview">Built as a final exam project during my exchange semester at Sungkyunkwan University. The program allows vendors to purchase items from a specific shop’s database. The vendors can...</p>
+                                </div>
+
+                                   <div class="buttons-container">
+                                            <div class="button">
+                                                <button id="read-more"><a href="GUI-project.html" class="article-link">READ MORE</a></button>
+                                            </div>
+                                           <div class="button">
+                                           <button id="visit-project"><a href="https://github.com/NikkiDilling/GUI-Retail-store-" class="article-link" target="_blank">VISIT PROJECT</a></button>
+                                           </div>
+                                    </div>
+                                
+                            </div>
+                                   
+                                   
+                        </div>
+                            
+                    
+                    </div> <!-- End of Slide Elements Container-->
+
+                        <div class="buttons-slide-container">
+                            <div class="button">
+                                <button id="left-btn" onclick="handleLeftClick()"><i class="fa-sharp fa-solid fa-caret-left"></i></button>
+                            </div>
+                            <div class="button">
+                                <button id="right-btn" onclick="handleRightClick()"><i class="fa-sharp fa-solid fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                
+            </article> <!-- END OF PROJECTS ARTICLE-->
+
+            
+
+            <article class="article-coding  article-border hidden">
 
 
                 <h2 class="article-title title-border">
@@ -107,121 +231,6 @@
                     </div>
             </article>
 
-            <article class="article-projects hidden">
-
-                
-                    <h2 class="article-title title-border">
-                        <img src="photo/click-icon.png" alt="click" class="click-icon">
-                         Projects 
-                    </h2>
-                
-                
-                <div class="slide-elements-container">
-                                  
-               
-                    <div class="article-slide-element" data-status="before" data-index="0">
-                        
-                        <div class="article-content-secondary">
-                            <img src="photo/project-website.png" alt="project-icon" class="article-image">
-                        </div>
-    
-                        <div class="article-content-primary">
-                            <h3 class="project-article-title">Personal Website</h3>
-                            <p class="project-article-preview">The challenging part in the development of the site was the functionality that I implemented with JavaScript in the “programming skills” section. If the user clicks on the icon displaying the skill...</p>
-    
-                            <div class="buttons-container">
-                                <div class="button">
-                                    <button id="read-more"><a href="this-website.html" class="article-link" target="_blank">READ MORE</a></button>
-                                </div>
-                                <div class="button">
-                                    <button id="visit-project"><a href="#" class="article-link">REFRESH PAGE</a></button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-                            
-                    <div class="article-slide-element" data-status="active" data-index="1">
-                        <div class="article-content-secondary">
-                            <img src="photo/project-hangman.png" alt="project-icon" class="article-image">
-                        </div>
-    
-                        <div class="article-content-primary">
-                            <h3 class="project-article-title">Hangman Game (JavaScript Project)</h3>
-                            <p class="project-article-preview">The HTML in this project is very simple, as I was mostly focused on adding functionality in JavaScript. Such us: lives count, game status, word generation, creation of letter elements...</p>
-    
-                            <div class="buttons-container">
-                                <div class="button">
-                                    <button id="read-more"><a href="hangman.html" class="article-link">READ MORE</a></button>
-                                </div>
-                                <div class="button">
-                                    <button id="visit-project"><a href="hangman-project/index.html" class="article-link" target="_blank">VISIT PROJECT</a></button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-    
-                      
-                        <div class="article-slide-element" data-status="after" data-index="2">
-                            <div class="article-content-secondary">
-                                <img src="photo/project-weather.png" alt="project-icon" class="article-image">
-                            </div>
-    
-                            <div class="article-content-primary">
-                                <h3 class="project-article-title">Weather Application (JavaScript API Project)</h3>
-                                <p class="project-article-preview">For the browser to gain access to the user’s current location it needs the user’s permission. That’s why I decided to give it a separate event listener, as an attempt at multithreading...</p>
-    
-                                <div class="buttons-container">
-                                        <div class="button">
-                                            <button id="read-more"><a href="weather-app-article.html" class="article-link">READ MORE</a></button>
-                                        </div>
-                                        <div class="button">
-                                         <button id="visit-project"><a href="weather-project/index.html" class="article-link" target="_blank">VISIT PROJECT</a></button>
-                                        </div>
-                                </div>
-                            </div>
-                                
-                                
-                         </div>
-                        
-
-                        <div class="article-slide-element" data-status="unknown" data-index="3">
-                            <div class="article-content-secondary">
-                               <img src="photo/project-gui.png" alt="project-icon" class="article-image">
-                           </div>
-       
-                               <div class="article-content-primary">
-                                   <h3 class="project-article-title">GUI-Order Management System</h3>
-                                   <p class="project-article-preview">Built as a final exam project during my exchange semester at Sungkyunkwan University. The program allows vendors to purchase items from a specific shop’s database. The vendors can set a budget for their overall purchases, which can include multiple orders over a span of time...</p>
-       
-                                   <div class="buttons-container">
-                                            <div class="button">
-                                                <button id="read-more"><a href="GUI-project.html" class="article-link">READ MORE</a></button>
-                                            </div>
-                                           <div class="button">
-                                           <button id="visit-project"><a href="https://github.com/NikkiDilling/GUI-Retail-store-" class="article-link" target="_blank">VISIT PROJECT</a></button>
-                                           </div>
-                                    </div>
-                                </div>
-                                   
-                                   
-                        </div>
-                            
-                    
-                    </div> <!-- End of Slide Elements Container-->
-
-                        <div class="buttons-slide-container">
-                            <div class="button">
-                                <button id="left-btn" onclick="handleLeftClick()"><i class="fa-sharp fa-solid fa-caret-left"></i></button>
-                            </div>
-                            <div class="button">
-                                <button id="right-btn" onclick="handleRightClick()"><i class="fa-sharp fa-solid fa-caret-right"></i></button>
-                            </div>
-                        </div>
-                
-            </article>
 
             <article class="article-education article-border hidden">
 
@@ -278,21 +287,6 @@
                 </div>
             
             </article>
-        
-
-            <article class="article-personal-traits article-border hidden">
-                <h2 class="article-title title-border"> Personal traits </h2>
-    
-                <div class="article-content">
-                    <ul class="article-list">
-                        <li class="article-list-item">Organized</li>
-                        <li class="article-list-item">Fast learner</li>
-                        <li class="article-list-item">Friendly</li>
-                        <li class="article-list-item">Open-minded</li>
-                        <li class="article-list-item">Punctual</li>
-                    </ul>
-                </div>
-            </article>
     
             <article class="article-last article-interests article-border hidden">
                 <h2 class="article-title title-border"> Interests </h2>
@@ -337,7 +331,8 @@
             
                 <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank" class="contact-social-link"><img src="photo/github-icon.jpg" alt="github link" class="contact-images"></a>
             </div>
-        
+            
+            <p class="contact-info-email"> Copyright 2023, Nikki Dilling-Hansen </p>
     </footer>
 
     <!-- SCRIPT -->

@@ -1,17 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'IBM Plex Mono', monospace;
-
-}
-
-img{
+.blog-image{
     display: block;
     width: 100%;
     max-width: 600px;
     margin: 1.2rem auto;
 }
+
 header{
     width: 60%;
     max-width: 600px;
@@ -21,6 +14,7 @@ header{
 
 header a{
     display: block;
+    color: #7e83d0;
 }
 
 header h4, header a{
@@ -50,7 +44,8 @@ span{
 main{
     width: 85%;
     max-width: 900px;
-    margin: auto;
+    margin:auto;
+    margin-bottom: 6rem;
 }
 
 .section{
