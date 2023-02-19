@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style-articles.css">
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    
+    <title>GUI Order Management System Project</title>
+</head>
+<body>
+    
+    <header>
+        <h1>GUI-Order Management System</h1>
+        <h4>Technologies used: <span class="java">Java</span>, <span class="swing">SWING</span>, <span class="eclipse">Eclipse</span></h4>
+        <a href="../index.html">Go back to main page</a>
+    </header>
+
+    <main>
+       
+        <div class="section section-1">
+            <h3 class="section-title">Purpose:</h3>
+            <p class="purpose-text">Built as a final exam project during my exchange semester at Sungkyunkwan University. 
+                The program allows vendors to purchase items from a specific shop’s database. 
+                The vendors can set a budget for their overall purchases, which can include multiple orders over a span of time. 
+                The system keeps track of users spending and orders. It is also possible to disclose your budget in different currency and the system which displays the item costs in US dollars, 
+                automatically converts the overall order cost to the user’s preferred currency.</p>    
+        </div>
+        <!--
+        <div class="section section-2">
+            <h3 class="section-title">Development Process:</h3>
+            <div class="development-process-text">
+
+                
+                
+            </div>    
+        </div>
+        -->
+        
+        <div class="section section-3">
+            <h3 class="section-title">Issues & Future Changes:</h3>
+
+            <h5 class="section-subtitle">Currency Transfer:</h5>
+                <p>
+                    It was my idea that the user can change the preferred currency at any time in the “account” menu. Although this functionality is implemented for transfers from dollars to any other currency, it still needs to be implemented for other currencies. For now, transferring for example from EUR to DKK will give an incorrect transfer.
+                </p>
+
+                <h5 class="section-subtitle">Jlist:</h5>
+                <p>
+                    One of the challenging parts for me as an inexperienced programmer at the time was utilizing jlist with an event listener. My idea was to be able to show different information in the same list, when a user clicked on “show items” or “ show orders” in the menu. The problem with this was that data in the list had different event listeners attached to them and once the list was displayed and the item clicked it had only that one listener attached to it. Therefore, for example is the user changed from “show items” to “show orders” he/she would not get the right response when clicking on the order to see the order information. To solve this problem at the beginning of the code section that was responsible for adding the new event listener, I first removed any event listener that was attached to the items in the Jlist before. Problem solved! After hours of looking at documentations and stackOverflow to find a solution to this problem… 
+                </p>
+            <h5 class="section-subtitle">.jar File:</h5>
+            <p>
+                It was a requirement to create the application as a jar file, which appeared to be a problem for me, since my program is using file output stream to save information about users and their orders. The problem was that one cannot make changes to the jar file, therefore after hours of frustration I found that I could save the information outside of the jar file by saving the path to the jar file and using that to save information in a different folder, for example the same folder where .jar file exists.
+            </p>
+
+            <h5 class="section-subtitle">Future Changes:</h3>
+                <ol>
+                    <li>Improve Currency conversion</li>
+                    <li>Connect the system to a database to store user information</li>
+                </ol>
+        </div>
+
+    </main>
+    
+
+    <footer class="footer-flex">
+
+        <address class="contact-info">
+            <h4>Contact Information</h4>
+            <p class="contact-info-email"> Email: ndillinghansen@gmail.com </p>
+        </address>
+
+        <div class="contact-social">
+            <a href="https://www.linkedin.com/in/nikki-dilling-hansen/" target="_blank" class="contact-social-link"><img src="../photo/linkedin-logo.png"  alt="linkedin link" class="contact-images"></a>
+        
+            <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank" class="contact-social-link"><img src="../photo/github-icon.jpg" alt="github link" class="contact-images"></a>
+        </div>
+        
+        <p class="contact-info-email"> Copyright 2023, Nikki Dilling-Hansen </p>
+        
+    </footer>
+
+</body>
+</html>

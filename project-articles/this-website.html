@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style-articles.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     
     <!-- Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
     <header class="blog-header">
         <h1>Personal Website</h1>
         <h4>Technologies used: <span class="html">HTML5</span>, <span class="css">CSS3</span>, <span class="js">JavaScript</span>, <span class="vscode">VScode</span></h4>
-        <a href="index.html">Go back to main page</a>
+        <a href="../index.html">Go back to main page</a>
     </header>
 
     <main>
@@ -44,14 +44,18 @@
                 <p>New structure of the page. All information is stored on 1 page to reduce clicking. Added scroll bar percentage in JavaScript (not implemented for mobile devices). Added animation to website sections on scroll using Intersection Observer in JavaScript. No detailed project description.</p>
 
                 <h5 class="section-subtitle">Iteration 3.</h5>
-                <p>Going forward I would like to stick with iteration 3 improving the website incrementally. In this iteration I’ve added detailed information about my projects and improved the CSS of the section displaying my projects. Currently I’m working on redesigning the sections, for each to work as a slide show for my skills, projects etc. </p>
+                <p>
+                    Going forward I would like to stick with iteration 3 improving the website incrementally. In this iteration I’ve added detailed information about my projects and improved the CSS of the section displaying my projects via “swiping”. The progress bar section lost the percentage display and is now taking up all of the height of the viewport. Furthermore in this iteration I slightly changes the CSS in the article elements for the title of the article to be above the purple container, which I think gives a bit more breathing room to the page.
+                </p>
             </div>    
         </div>
 
         <div class="section section-3">
             <h3 class="section-title">Issues & Future Changes:</h3>
             
-            <p>The challenging part in the development of the site was the functionality that I implemented with JavaScript in the “programming skills” section. If the user clicks on the icon displaying the skill it will scale up and display the name of the skill, then on the second click it will scale down and the label will disappear.</p>
+            <p>
+                The challenging part in the development of the site was the functionality that I implemented with JavaScript in the “projects” section. A YouTube video “ImNotGoodEnough.js” from Hyperplexed inspired me to implement a swiping function to displaying my projects, because I thought it was more entertaining and I wanted to try coding the feature myself. The challenge in this task was appropriating a code that was used for a similar task to do what I wanted to do. Since my task required the sequential display of the projects I needed to implement a more strict rule for the function that was changing the indexes of the 3 fixed positions: before, active and after.
+            </p>
         </div>
 
     </main>
@@ -64,9 +68,9 @@
         </address>
 
         <div class="contact-social">
-            <a href="https://www.linkedin.com/in/nikki-dilling-hansen/" target="_blank" class="contact-social-link"><img src="photo/linkedin-logo.png"  alt="linkedin link" class="contact-images"></a>
+            <a href="https://www.linkedin.com/in/nikki-dilling-hansen/" target="_blank" class="contact-social-link"><img src="../photo/linkedin-logo.png"  alt="linkedin link" class="contact-images"></a>
         
-            <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank" class="contact-social-link"><img src="photo/github-icon.jpg" alt="github link" class="contact-images"></a>
+            <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank" class="contact-social-link"><img src="../photo/github-icon.jpg" alt="github link" class="contact-images"></a>
         </div>
         
         <p class="contact-info-email"> Copyright 2023, Nikki Dilling-Hansen </p>

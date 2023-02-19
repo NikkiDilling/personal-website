@@ -86,13 +86,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 function updateProgressBar(){
     //updating scroll bar text and progress bar
     progressBar.style.height = `${getScrollPercentage()}%`;
-    progessNum.innerText = `${Math.ceil(getScrollPercentage())}%`
-
-    //stopping the progress bar at 100%
-        if(getScrollPercentage() >= 100){
-            progressBar.style.height = `100%`;
-            progessNum.innerText = `100%`;
-        }
+    //progessNum.innerText = `${Math.ceil(getScrollPercentage())}%`
 
     //look up this function
     requestAnimationFrame(updateProgressBar);

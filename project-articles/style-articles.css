@@ -7,7 +7,6 @@
 
 header{
     width: 60%;
-    max-width: 600px;
     margin: 4rem auto;
     text-align: center;
 }
@@ -58,6 +57,10 @@ main{
 
 .section-subtitle{
     margin: 5px auto;
+}
+
+p{
+    line-height: 1.5;
 }
 
 ol{

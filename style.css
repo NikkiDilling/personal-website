@@ -135,7 +135,8 @@ article{
    margin-bottom: 16em; /*spacing between articles*/
 }
 
-.article-border{
+.article-content{
+    margin-top: 40px;
     border: 10px solid  #7e83d0;
     border-radius: 30px;
 }
@@ -223,20 +224,25 @@ article{
     display:none;
 }
 
-#read-more, #visit-project{
+.article-link{
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+    color: #E75A64;
+    font-size: 0.9;
+    font-weight: 700;
     border: 1px solid #E75A64;
     border-radius: 30px;
-    background-color: #E75A64;
+    background-color: white;
     padding: 6px 12px;
     cursor: pointer;
     margin-bottom: 10px;
-    width: 160px;
+    transition: 0.5s;
 }
 
-#read-more a, #visit-project a{
+.article-link:hover{
     color: white;
-    font-size: 0.9;
-    font-weight: 700;
+    background-color: #E75A64;
 }
 
 
@@ -333,11 +339,11 @@ footer{
      .progress-section{
         position: fixed;
         right: 0;
-        top: 0;
-        height: 100%;
+        top: -1px;
+        height: 101%;
         width: 56px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         transition: .03s ease-out;
     }
 
@@ -346,7 +352,7 @@ footer{
         width: 10px;
 
         overflow: hidden;
-        background-color: rgb(70,70,70);
+        background-color: rgba(143, 143, 143, 0.5);
     }
 
     .progress-bar{
@@ -356,10 +362,6 @@ footer{
         height: 0%;
         background-color: #E75A64;
     }
-
-    
-   
-   
 
     body::-webkit-scrollbar{
         display: none; /*removing the scroll bar*/
@@ -452,6 +454,7 @@ footer{
     }
 
     .buttons-container{
+        margin-top: 0;
         flex-direction: row;
         justify-content: space-around;
     }
@@ -474,4 +477,13 @@ footer{
         color: white;
     }
 
+    .article-link{
+        width: 100px;
+        margin-bottom: 0;
+    }
+
+    .article-link:hover{
+        width: 100px;
+        margin-bottom: 0;
+    }
 }

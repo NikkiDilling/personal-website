@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style-articles.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     
     <!-- Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     <header>
         <h1>Hangman Game</h1>
         <h4>Technologies used: <span class="html">HTML5</span>, <span class="css">CSS3</span>, <span class="js">JavaScript</span>, <span class="vscode">VScode</span></h4>
-        <a href="index.html">Go back to main page</a>
+        <a href="../index.html">Go back to main page</a>
     </header>
 
     <main>
@@ -37,7 +37,7 @@
                 <p>The HTML in this project is very simple, as I was mostly focused on adding functionality in JavaScript. Such us: lives count, game status, word generation, creation of letter elements.</p>
                 <h5 class="section-subtitle">Game status:</h5>
                 <p>Game status is implemented by using a Boolean value to check if the user has reached the end of the game (game over or win). To do that I added a general if statement in the keyboard event listener:</p>
-                <img src="photo/hA-pic1.png" alt="code" class="blog-image">
+                <img src="../photo/hA-pic1.png" alt="code" class="blog-image">
                 <p>Inside this if statement is a nested if-else statement which tracks the correct and wrong guesses. If the letter is guessed correctly the guessed counter number goes up, constantly comparing it to the length of the word. Otherwise, if the letter was guessed wrongly the mistakes count number goes up. If any of those numbers reaches its maximum, the game ends and the Boolean value gets updated.</p>
                 <h5 class="section-subtitle">Letter Elements:</h5>
                 <p>Letter Elements was something that I found challenging to implement, as the right number of letter elements had to be created and the guessed letters had to appear in the right “box”. Furthermore, what needed more attention is displaying letters that appear twice.</p>
@@ -61,9 +61,9 @@
         </address>
 
         <div class="contact-social">
-            <a href="https://www.linkedin.com/in/nikki-dilling-hansen/" target="_blank" class="contact-social-link"><img src="photo/linkedin-logo.png"  alt="linkedin link" class="contact-images"></a>
+            <a href="https://www.linkedin.com/in/nikki-dilling-hansen/" target="_blank" class="contact-social-link"><img src="../photo/linkedin-logo.png"  alt="linkedin link" class="contact-images"></a>
         
-            <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank" class="contact-social-link"><img src="photo/github-icon.jpg" alt="github link" class="contact-images"></a>
+            <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank" class="contact-social-link"><img src="../photo/github-icon.jpg" alt="github link" class="contact-images"></a>
         </div>
         
         <p class="contact-info-email"> Copyright 2023, Nikki Dilling-Hansen </p>
