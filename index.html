@@ -9,11 +9,14 @@
 
     <!--stylesheet-->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Font -->
+    <!-- Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
 
     <title>Nikki Dilling-Hansen</title>
 
@@ -52,71 +55,182 @@
    
         <main role="main" class="column">
 
+            <article class="article-first article-projects hidden">
 
+                
+                    <h2 class="article-title title-border">
+                        <img src="photo/click-icon.png" alt="click" class="click-icon">
+                         Projects 
+                    </h2>
+                
+                
+                <div class="slide-elements-container">
+                                  
+               
+                    <div class="article-slide-element" data-status="before" data-index="0">
+                        
+                        <div class="article-content-secondary">
+                            <img src="photo/project-website.png" alt="project-icon" class="article-image">
+                        </div>
+    
+                        <div class="article-content-primary">
+                            <div class="content-primary-container">
+                            <h3 class="project-article-title">Personal Website</h3>
+                            <p class="project-article-preview">The challenging part in the development of the site was the functionality that I implemented with JavaScript in the “projects” section...</p>
+                            </div>
 
-            <article class="article-first article-coding hidden">
+                            <div class="buttons-container">
+                                <div class="button">
+                                   <a href="project-articles/this-website.html" class="article-link">READ MORE</a>
+                                </div>
+                                <div class="button">
+                                   <a href="#" class="article-link">REFRESH PAGE</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                            
+                    <div class="article-slide-element" data-status="active" data-index="1">
+                        <div class="article-content-secondary">
+                            <img src="photo/project-hangman.png" alt="project-icon" class="article-image">
+                        </div>
+    
+                        <div class="article-content-primary">
+                            <div class="content-primary-container">
+                            <h3 class="project-article-title">Hangman Game (JavaScript Project)</h3>
+                            <p class="project-article-preview">The HTML in this project is very simple, as I was mostly focused on adding functionality in JavaScript...</p>
+                            </div>
+
+                            <div class="buttons-container">
+                                <div class="button">
+                                    <a href="project-articles/hangman.html" class="article-link">READ MORE</a>
+                                </div>
+                                <div class="button">
+                                    <a href="hangman-project/index.html" class="article-link" target="_blank">VISIT PROJECT</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+    
+                      
+                        <div class="article-slide-element" data-status="after" data-index="2">
+                            <div class="article-content-secondary">
+                                <img src="photo/project-weather.png" alt="project-icon" class="article-image">
+                            </div>
+    
+                            <div class="article-content-primary">
+                                <div class="content-primary-container">
+                                <h3 class="project-article-title">Weather Application (JavaScript API Project)</h3>
+                                <p class="project-article-preview">For the browser to gain access to the user’s current location it needs the user’s permission. That’s why...</p>
+                                </div>
+                                <div class="buttons-container">
+                                        <div class="button">
+                                            <a href="project-articles/weather-app-article.html" class="article-link">READ MORE</a>
+                                        </div>
+                                        <div class="button">
+                                         <a href="weather-project/index.html" class="article-link" target="_blank">VISIT PROJECT</a>
+                                        </div>
+                                </div>
+                            </div>
+                                
+                                
+                         </div>
+                        
+
+                        <div class="article-slide-element" data-status="unknown" data-index="3">
+                            <div class="article-content-secondary">
+                               <img src="photo/project-gui.png" alt="project-icon" class="article-image">
+                           </div>
+       
+                            <div class="article-content-primary">
+                                <div class="content-primary-container">
+                                   <h3 class="project-article-title">GUI-Order Management System</h3>
+                                   <p class="project-article-preview">Built as a final exam project during my exchange semester at Sungkyunkwan University. The program allows vendors to purchase items from a specific shop’s database. The vendors can...</p>
+                                </div>
+
+                                   <div class="buttons-container">
+                                            <div class="button">
+                                                <a href="project-articles/GUI-project.html" class="article-link" >READ MORE</a>
+                                            </div>
+                                           <div class="button">
+                                            <a href="https://github.com/NikkiDilling/GUI-Retail-store-" class="article-link" target="_blank">VISIT PROJECT</a>
+                                           </div>
+                                    </div>
+                                
+                            </div>
+                                   
+                                   
+                        </div>
+                            
+                    
+                    </div> <!-- End of Slide Elements Container-->
+
+                        <div class="buttons-slide-container">
+                            <div class="button">
+                                <button id="left-btn" onclick="handleLeftClick()"><i class="fa-sharp fa-solid fa-caret-left"></i></button>
+                            </div>
+                            <div class="button">
+                                <button id="right-btn" onclick="handleRightClick()"><i class="fa-sharp fa-solid fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                
+            </article> <!-- END OF PROJECTS ARTICLE-->
+
+            
+
+            <article class="article-coding hidden">
 
 
                 <h2 class="article-title title-border">
-                    <img src="photo/click-icon.png" alt="click" class="click-icon">
+                    <!-- <img src="photo/click-icon.png" alt="click" class="click-icon"> -->
                     Programming Skills
                 </h2>
-                   
-                <div class="article-content article-icons">
+                    <div class="article-icons article-content">
                         <div class="content-container">
                             <img src="photo/html-icon.png" alt="html" id="HTML5" class="html-icon">
                             <p></p>
                         </div>
+                    
                         <div class="content-container">
                             <img src="photo/css-icon.png" alt="css" id="CSS3" class="css-icon"> 
                             <p></p>
-                        </div>
+                        </div> 
+
                         <div class="content-container">
                             <img src="photo/javascript-logo.png" alt="javascript" id="JavaScript" class="js-icon"> 
                             <p></p>
                         </div>
+
                         <div class="content-container">
                             <img src="photo/c-logo.png" alt="c" id="C" class="c-icon">
                             <p></p>
                         </div>
+
                         <div class="content-container">
                             <img src="photo/java-logo.png" alt="java" id="Java"class="java-icon">
                             <p></p>
                         </div>
+
                         <div class="content-container">
                             <img src="photo/git-logo.png" alt="git" id="GIT" class="git-icon">
                             <p></p>
                         </div>
+
                         <div class="content-container">
                             <img src="photo/mysql-logo.png" alt="mysql" id="MySql" class="mysql-icon">
                             <p></p>
                         </div>
+
                         <div class="content-container">
                             <img src="photo/figma-logo.png" alt="figma" id="Figma" class="figma-icon">
                             <p></p>
-                        </div>
-
+                        </div>               
                     </div>
-                                   
             </article>
 
-            <article class="article-projects hidden">
-
-                <h2 class="article-title title-border">
-                    <img src="photo/click-icon.png" alt="click" class="click-icon">
-                     Projects 
-                </h2>
-
-                <div class="article-content">
-                    <ul class="article-list">
-                        <li class="article-list-item"><a href="index.html" class="article-link" target="_blank">Personal website</a></li>
-                        <li class="article-list-item"><a href="hangman-project/index.html" class="article-link" target="_blank">Hangman Game (JavaScript Project)</a></li>
-                        <li class="article-list-item"><a href="weather-project/index.html" class="article-link" target="_blank">Weather Application (JavaScript API Project)</a></li>
-                        <li class="article-list-item"><a href="https://github.com/NikkiDilling/GUI-Retail-store-" class="article-link" target="_blank">GUI Retail Store Order Managment System</a></li>
-                    </ul>
-                </div>
-                
-            </article>
 
             <article class="article-education hidden">
 
@@ -173,21 +287,6 @@
                 </div>
             
             </article>
-        
-
-            <article class="article-personal-traits hidden">
-                <h2 class="article-title title-border"> Personal traits </h2>
-    
-                <div class="article-content">
-                    <ul class="article-list">
-                        <li class="article-list-item">Organized</li>
-                        <li class="article-list-item">Fast learner</li>
-                        <li class="article-list-item">Friendly</li>
-                        <li class="article-list-item">Open-minded</li>
-                        <li class="article-list-item">Punctual</li>
-                    </ul>
-                </div>
-            </article>
     
             <article class="article-last article-interests hidden">
                 <h2 class="article-title title-border"> Interests </h2>
@@ -207,7 +306,7 @@
         
         <aside class="progress-section">
                          
-            <div class="progress-num"></div>
+            <!-- <div class="progress-num"></div> -->
 
             <div class="progress-bar-wrap">
                 <div class="progress-bar"></div>
@@ -232,7 +331,8 @@
             
                 <a href="https://github.com/NikkiDilling?tab=repositories" target="_blank" class="contact-social-link"><img src="photo/github-icon.jpg" alt="github link" class="contact-images"></a>
             </div>
-        
+            
+            <p class="contact-info-email"> Copyright 2023, Nikki Dilling-Hansen </p>
     </footer>
 
     <!-- SCRIPT -->

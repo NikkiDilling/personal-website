@@ -1,13 +1,14 @@
 body{
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: 400;
     font-size: 1.125rem;
     color: #434343;
+    overflow-x: hidden;
 }
 
-img{
+.article-icons .content-container img, .container-flex-header img{
     width: 100%;
     max-width: 100px;
 }
@@ -17,7 +18,7 @@ img{
 *******************/
 
 h1,h2,h4{
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: 700;
     font-size: 1.75rem;
 }
@@ -67,7 +68,7 @@ ul{
 .container{
     margin: auto; /*centering the container*/
     width: 90%;
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
 }
 
@@ -130,10 +131,16 @@ nav ul{
 
 article{
    padding: .5em 2em;
-   border: 10px solid  #7e83d0;
    border-radius: 90px;
    margin-bottom: 16em; /*spacing between articles*/
 }
+
+.article-content{
+    margin-top: 40px;
+    border: 10px solid  #7e83d0;
+    border-radius: 30px;
+}
+
 
 .article-icons img{
     margin-top: 1.2rem;
@@ -151,10 +158,6 @@ article{
     margin-bottom: 0;
 }
 
-.article-link:hover{
-    color: #a0a5f2;
-}
-
 .article-list,
 .article-sublist{
     margin: 0 auto; /*centering the list*/
@@ -164,17 +167,89 @@ article{
     padding: 0.5em 0; /*space for mobile*/
 }
 
-.article-content{
-    margin: 1em auto;
-
-}
-
 .click-icon{
     width: 2.5rem;
 }
-/* icons JavaScript manupilation*/
 
+
+.article-slide-element{
+    margin: auto;
+    max-width: 460px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 20px;
+    border: 10px solid  #7e83d0;
+    border-radius: 30px;
+    text-align: center;
+    background-color: white;
+}
+
+
+.article-content-secondary{
+    display: none;
+}
+
+.article-content-primary{
+    order: 1;
+}
+
+.buttons-slide-container{
+    margin-top: 20px;
+}
+
+.project-article-title{
+    margin-top: 0;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+/****************
+    Buttons
+*****************/
+
+.buttons-container{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.buttons-container{
+    margin-top: 40px;
+
+}
+
+.buttons-slide-container{
+    display:none;
+}
+
+.article-link{
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+    color: #E75A64;
+    font-size: 0.9;
+    font-weight: 700;
+    border: 1px solid #E75A64;
+    border-radius: 30px;
+    background-color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.article-link:hover{
+    color: white;
+    background-color: #E75A64;
+}
+
+
+/* icons JavaScript manupilation*/
+/*
 .content-container{
+
     cursor: pointer;
     transition: .5s;
 }
@@ -194,7 +269,7 @@ article{
     border: 1px solid black;
     border-radius: 15px;
 }
-
+*/
 
 
 /* footer */
@@ -238,6 +313,7 @@ footer{
 
 /* desktop media query 
    (min-width) from width of 870px to BIGGER (deleted)
+
 */
 @media (min-width: 870px){
 
@@ -261,24 +337,22 @@ footer{
      /* Progress Bar */
 
      .progress-section{
-
         position: fixed;
-        right: 20px;
-        top: 25%;
-        height: 20%;
+        right: 0;
+        top: -1px;
+        height: 101%;
         width: 56px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         transition: .03s ease-out;
     }
 
     .progress-bar-wrap{
         position: relative;
-        width: 5px;
-        border: 1px solid black;
-        border-radius: 10px;
+        width: 10px;
+
         overflow: hidden;
-        background-color: rgb(70,70,70);
+        background-color: rgba(143, 143, 143, 0.5);
     }
 
     .progress-bar{
@@ -286,18 +360,130 @@ footer{
         top: 0;
         width: 100%;
         height: 0%;
-        background-color: #E75A64;;
+        background-color: #E75A64;
     }
-
-    
-    .progress-num{
-    color: #464646;
-    }
-   
 
     body::-webkit-scrollbar{
         display: none; /*removing the scroll bar*/
     }
 
+    /*********************
+    Article Projects Slide Style
+    *********************/
 
+    .article-projects{
+        position: relative;
+        
+    }
+
+    .slide-elements-container{
+        position: relative;
+        height: 420px;
+    }
+
+    .article-slide-element{
+        width: 80%;
+        max-width: 460px;
+        height: 200px;
+        text-align: start;
+        position: absolute;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        transition: transform 0.4s;
+
+        /*centering absolutely positioned div*/
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+
+    .article-content-secondary{
+        display: inline-block;
+        width: 20%;
+        order: 1;
+    }
+
+    .article-content-primary{
+        width: 76%;
+        order: 2;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .article-content-secondary img{
+        min-width: 92px;
+        min-height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+    
+    .article-slide-element[data-status="active"]{
+        z-index: 1;
+    }
+    .article-slide-element[data-status="after"]{
+        z-index: 0;
+        transform: translateX(74%) translateY(20%);
+    }
+    
+    .article-slide-element[data-status="before"]{
+        transform: translateX(-74%) translateY(20%);
+        z-index: 0;
+    }
+    
+    .article-slide-element[data-status="unknown"]{
+        transform: scale(0);
+        z-index: 0;
+    }
+    
+    .article-education{
+        margin-top: 40px;
+        clear: both;
+    }
+    
+    /*Buttons*/
+    .buttons-slide-container{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around; 
+
+    }
+
+    .buttons-container{
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .fa-caret-left, .fa-caret-right{
+        padding: 10px;
+    }
+    
+    #right-btn, #left-btn{
+        border: 1px solid  #e75a64 ;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.6s;
+        color: #e75a64 ;
+    }
+    
+    #right-btn:hover, #left-btn:hover{
+        cursor: pointer;
+        background-color: rgba(225, 85, 85, 0.75);
+        color: white;
+    }
+
+    .article-link{
+        width: 100px;
+        margin-bottom: 0;
+    }
+
+    .article-link:hover{
+        width: 100px;
+        margin-bottom: 0;
+    }
 }

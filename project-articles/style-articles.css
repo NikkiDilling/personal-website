@@ -1,0 +1,69 @@
+.blog-image{
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 1.2rem auto;
+}
+
+header{
+    width: 60%;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+header a{
+    display: block;
+    color: #7e83d0;
+}
+
+header h4, header a{
+    margin-top: 20px;
+}
+
+span{
+    font-weight: 400;
+}
+
+.js, .java{
+    color: red;
+}
+
+.html, .eclipse{
+    color: orange;
+}
+
+.css{
+    color: blue
+}
+
+.vscode, .swing{
+    color: rgb(87, 160, 232);
+}
+
+main{
+    width: 85%;
+    max-width: 900px;
+    margin:auto;
+    margin-bottom: 6rem;
+}
+
+.section{
+    margin: 1.6rem;
+}
+
+.section h3{
+    margin-bottom: 10px;
+}
+
+.section-subtitle{
+    margin: 5px auto;
+}
+
+p{
+    line-height: 1.5;
+}
+
+ol{
+  width: 80%;
+  margin: auto;
+}
