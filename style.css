@@ -243,6 +243,7 @@ article{
 .article-link:hover{
     color: white;
     background-color: #E75A64;
+    border: 1px solid #E75A64;
 }
 
 
@@ -464,7 +465,7 @@ footer{
     }
     
     #right-btn, #left-btn{
-        border: 1px solid  #e75a64 ;
+        border: 1px solid #E75A64;
         background-color: white;
         border-radius: 50%;
         transition: 0.6s;
@@ -473,7 +474,8 @@ footer{
     
     #right-btn:hover, #left-btn:hover{
         cursor: pointer;
-        background-color: rgba(225, 85, 85, 0.75);
+        border: 1px solid #E75A64;
+        background-color: #E75A64;
         color: white;
     }
 
