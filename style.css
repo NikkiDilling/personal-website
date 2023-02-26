@@ -13,6 +13,8 @@ body{
     max-width: 100px;
 }
 
+
+
 /*******************
     Typography
 *******************/
@@ -88,7 +90,7 @@ header{
 
 .header-image{
     margin: 0 auto; /*centering the picture*/
-    border-radius: 80px;
+    border-radius: 30px;
 }
 
 /* navigation */
@@ -138,7 +140,8 @@ article{
 .article-content{
     margin-top: 40px;
     border: 10px solid  #7e83d0;
-    border-radius: 30px;
+    border-bottom: 10px solid #656aa9;
+    border-radius: 12px;
 }
 
 
@@ -181,7 +184,8 @@ article{
     padding: 2rem;
     margin-bottom: 20px;
     border: 10px solid  #7e83d0;
-    border-radius: 30px;
+    border-bottom: 10px solid #656aa9;
+    border-radius: 12px;
     text-align: center;
     background-color: white;
 }
@@ -231,8 +235,9 @@ article{
     color: #E75A64;
     font-size: 0.9;
     font-weight: 700;
-    border: 1px solid #E75A64;
-    border-radius: 30px;
+    border: 2.5px solid #E75A64;
+    border-bottom: 2.5px solid #ad3c44;
+    border-radius: 12px;
     background-color: white;
     padding: 6px 12px;
     cursor: pointer;
@@ -243,6 +248,7 @@ article{
 .article-link:hover{
     color: white;
     background-color: #E75A64;
+    border: 2.5px solid #E75A64;
 }
 
 
@@ -390,7 +396,7 @@ footer{
         flex-direction: row;
         justify-content: space-between;
         
-        transition: transform 0.4s;
+        transition: transform 0.5s;
 
         /*centering absolutely positioned div*/
         left: 0; 
@@ -428,6 +434,7 @@ footer{
     .article-slide-element[data-status="after"]{
         z-index: 0;
         transform: translateX(74%) translateY(20%);
+
     }
     
     .article-slide-element[data-status="before"]{
@@ -460,20 +467,23 @@ footer{
     }
 
     .fa-caret-left, .fa-caret-right{
-        padding: 10px;
+        font-size: 1.2rem;
+        padding: 8px;
     }
     
     #right-btn, #left-btn{
-        border: 1px solid  #e75a64 ;
+        border: 2.5px solid #E75A64;
+        border-bottom: 2.5px solid #ad3c44;
         background-color: white;
-        border-radius: 50%;
+        border-radius: 12px;
         transition: 0.6s;
         color: #e75a64 ;
     }
     
     #right-btn:hover, #left-btn:hover{
         cursor: pointer;
-        background-color: rgba(225, 85, 85, 0.75);
+        background-color: #E75A64;
+        border: 2.5px solid #E75A64;
         color: white;
     }
 
